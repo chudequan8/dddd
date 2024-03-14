@@ -1,0 +1,17 @@
+.text-bg-clip {
+  background-image: linear-gradient(0deg, #fff, #fff), linear-gradient(180deg, #0f7119 17.89%, #0f7119 58.61%, #0f7119 102.56%);
+  background-clip: text;
+  -webkit-filter: drop-shadow(2px 2px 0 #0f7119);
+  filter: drop-shadow(2px 2px 0 #0f7119);
+  color: transparent;
+}
+
+.qeust-bg {
+  background: linear-gradient(26.79deg, rgba(109, 43, 255, .480402) 1.86%, rgba(109, 43, 255, .04) 85.25%, rgba(109, 43, 255, .04) 85.25%),
+    rgba(216, 216, 216, .05);
+}
+
+.spin-bg {
+  background: linear-gradient(19.92deg, rgba(175, 13, 132, .511772) -6.45%, rgba(175, 13, 132, .04) 78.77%),
+    rgba(216, 216, 216, .05);
+}
