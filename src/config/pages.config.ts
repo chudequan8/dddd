@@ -1,4 +1,4 @@
-import productsDb from '../mocks/db/products.db';
+// import productsDb from '../mocks/db/products.db';
 
 export const asidePages: PagesType.Pages = [
   {
@@ -257,7 +257,7 @@ export const headMenuPages: PagesType.Pages = [
     icon: "SvgHome",
   },
   {
-    to: "/sports",
+    to: "/sports/liveEvents",
     text: "sports",
     icon: "icon-menu-real-casino",
   },
