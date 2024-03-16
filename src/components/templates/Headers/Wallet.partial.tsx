@@ -341,7 +341,7 @@ export const Wallet = () => {
                     color: '#fff',
                     padding: '10px 30px',
                     fontSize: '14px',
-                    backgroundImage:'conic-gradient(from 1turn, rgba(136, 83, 252, 1), rgba(110, 52, 226, 1));',
+                    backgroundImage:'conic-gradient(from 1turn, rgba(136, 83, 252, 1), rgba(110, 52, 226, 1))',
                     border:'none',
                 }}
                 icon='HeroSportMenuIcon'

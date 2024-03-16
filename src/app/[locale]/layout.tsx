@@ -26,7 +26,7 @@ const RootLayout = ({
 }) => {
 
   return (
-    <html suppressHydrationWarning lang={locale} dir={dir(locale)} className={classNames(...variables, 'theme-default')}>
+    <html suppressHydrationWarning lang={locale} dir={dir(locale)} className={classNames(...variables, 'theme-default dark')}>
       <body>
         {children}
       </body>

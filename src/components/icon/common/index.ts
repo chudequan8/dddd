@@ -14,7 +14,27 @@ export { default as CasinoStarIcon } from './CasinoStarIcon'
 export { default as CasinoJIcon } from './CasinoJIcon'
 export { default as HeroInformationCircle } from './InformationCircle';
 export { default as HeroLanguage } from './Language';
+export { default as HeroChevronRight } from './ChevronRight';
 
 // Sports Icon
 export { default as SvgHome } from './sprots-icons/Home'
 export { default as SvgLive } from './sprots-icons/SportsLive'
+
+// Headers
+export { default as HeroChatBubbleLeftEllipsis } from './ChatBubbleLeftEllipsis';
+export { default as HeroCasinoMenuIcon } from "./CasinoMenuIcon"
+export { default as HeroSportMenuIcon } from "./SportsMenuIcon"
+export { default as HeroRacingMenuIcon } from "./RacingMenuIcon"
+export { default as HeroLotteryMenuIcon } from "./LotteryMenuIcon"
+export { default as HeroAntModalClose } from "./AntModalClose"
+export { default as HeroGoogleLogin } from "./GoogleLogin"
+export { default as HeroTGLogin } from "./TGLogin"
+export { default as HeroMetaMask } from "./MetaMask"
+export { default as HeroWalletConnect } from "./WalletConnect"
+export { default as HeroWhatsApp } from "./WhatsApp"
+export { default as HeroLine } from "./Line"
+export { default as HeroSteam } from "./Steam"
+export { default as HeroNotice } from "./Notice"
+export { default as HeroDropDown } from "./DropDown"
+export { default as HeroWarning } from "./Warning"
+export { default as HeroAddAndDel } from "./AddAndDel"

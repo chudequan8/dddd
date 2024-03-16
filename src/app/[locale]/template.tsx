@@ -8,6 +8,7 @@ import { Toaster } from "sonner"
 import { FC, ReactNode } from "react"
 import TranslationsProvider from "@/components/TranslationsProvider"
 import { ThemeContextProvider } from "@/context/themeContext"
+import MessagesPartial from "@/components/templates/Message/DefaultMessages.template";
 
 const Template: FC<{
   children: ReactNode
@@ -26,6 +27,7 @@ const Template: FC<{
                 {children}
               <FooterRouter />
             </AsideWrapper>
+            <MessagesPartial/>
           </TranslationsProvider>
         </ThemeContextProvider>
       </div>

@@ -7,6 +7,7 @@ import { TColors } from '@/types/colors.type';
 import { TColorIntensity } from '@/types/colorIntensities.type';
 import { textColor } from '@/utils/textColor.util';
 import { TFontSizes } from '@/types/fontSizes.type';
+import { useTheme } from '@/context/themeContext';
 
 interface IRefWrapperProps extends Record<string, any> {
 	children: ReactNode;
@@ -32,6 +33,7 @@ export interface IIconProps extends HTMLAttributes<HTMLSpanElement> {
 }
 const Icon = forwardRef<HTMLSpanElement, IIconProps>((props, ref) => {
 	const { icon, className, color, colorIntensity, size, ...rest } = props;
+	const { isDarkTheme } = useTheme()
 	const IconName = pascalcase(icon);
 	
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -41,7 +43,6 @@ const Icon = forwardRef<HTMLSpanElement, IIconProps>((props, ref) => {
 	if (CommonIconWrapper == undefined) {
 		CommonIconWrapper = CommonIcon['Nav1'];
 	}
-
 	const CLASS_NAMES = classNames(
 		'svg-icon',
 		{ [`${size as TFontSizes}`]: typeof size !== 'undefined' },

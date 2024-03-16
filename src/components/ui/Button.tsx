@@ -25,6 +25,7 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
 	rounded?: TRounded;
 	size?: TButtonSize;
 	variant?: TButtonVariants;
+	hover?: boolean
 }
 
 const DefButton = React.forwardRef(function (props: any, ref) {
@@ -43,15 +44,12 @@ const DefButton = React.forwardRef(function (props: any, ref) {
 		rounded = themeConfig.rounded,
 		size = 'default',
 		variant = 'default',
+		hover = false,
 		...rest
     } = props
 
     const HAS_CHILDREN = typeof children !== 'undefined';
 
-    const classes = classNames(
-        className,
-        'flex cursor-pointer items-center justify-center rounded-[4px] bg-[#1D1E22] px-[18px] py-3 text-[14px] text-[#98A7B5] transition-[300] hover:bg-[#2D3035]  hover:text-[#FFF]',
-    )
 	const { textColor, shadeColorIntensity } = useColorIntensity(colorIntensity);
 
 	/**
@@ -145,8 +143,8 @@ const DefButton = React.forwardRef(function (props: any, ref) {
 				'py-1.5',
 				'text-base',
 			),
-			icon: classNames({ 'ltr:mr-1.5 rtl:ml-1.5': HAS_CHILDREN }, 'text-[1.5rem]'),
-			rightIcon: classNames('ltr:ml-1.5', 'rtl:mr-1.5', 'text-[1.5rem]'),
+			icon: classNames({ 'ltr:mr-1.5 rtl:ml-1.5': HAS_CHILDREN }, 'text-[1.25rem]'),
+			rightIcon: classNames('ltr:ml-1.5', 'rtl:mr-1.5', 'text-[1.25rem]'),
 		},
 		lg: {
 			general: classNames(
@@ -181,13 +179,23 @@ const DefButton = React.forwardRef(function (props: any, ref) {
 	 * Disable
 	 */
 	const btnDisabledClasses = 'opacity-50 pointer-events-none';
-
+	const classes = classNames(
+		hover ?
+			'flex cursor-pointer items-center justify-center rounded-[4px] bg-[#1D1E22] px-[18px] py-3 text-[14px] text-[#98A7B5] transition-[300] hover:bg-[#2D3035]  hover:text-[#FFF]' :
+			'inline-flex items-center justify-center',
+		btnVariantClasses,
+		btnSizeClasses,
+		rounded,
+		themeConfig.transition,
+		{ [`${btnDisabledClasses}`]: isDisable || isLoading },
+		className,
+	)
     return (
-        <button ref={ref} className={classes} onClick={onClick}>
+        <button ref={ref} data-component-name='Button' type='button' className={classes} onClick={onClick} {...rest}>
 			{
 				icon ? <Icon
 					icon={icon as TIcons}
-					className={btnIconClasses}
+					className={classNames({ 'animate-spin': isLoading }, btnIconClasses)}
 				/> : undefined
 			}
             

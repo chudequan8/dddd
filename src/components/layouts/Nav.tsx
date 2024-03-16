@@ -272,7 +272,7 @@ export const NavCollapse: FC<INavCollapseProps> = (props) => {
 
   const pathname = usePathname();
 
-  const here = to !== "/" && pathname.includes(to);
+  const here = to && to !== "/" && pathname.includes(to);
 
   useEffect(() => {
     setIsActive(here);
