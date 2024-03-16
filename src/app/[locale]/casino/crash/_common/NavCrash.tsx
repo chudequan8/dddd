@@ -146,17 +146,16 @@ const NavCrash = () => {
       <div className='text-title text-2xl my-8 mb-4'>Latest bet & Race</div>
       <div className='p-4 bg-[#2b2f37]'>
         <div className='w-full bg-[#191b1f] flex p-1 gap-2'>
-          <Button onClick={() => setLatestBtnActive(0)} className={`flex-1 ${latestBtnActive == 0 ? 'bg-[#2D3035]' : 'bg-transparent'}`}>My Bets</Button>
-          <Button onClick={() => setLatestBtnActive(1)} className={`flex-1 ${latestBtnActive == 1 ? 'bg-[#2D3035]' : 'bg-transparent'}`}>History</Button>
-          <Button onClick={() => setLatestBtnActive(2)} className={`flex-1 ${latestBtnActive == 2 ? 'bg-[#2D3035]' : 'bg-transparent'}`}>High roolers</Button>
-          <Button onClick={() => setLatestBtnActive(3)} className={`flex-1 ${latestBtnActive == 3 ? 'bg-[#2D3035]' : 'bg-transparent'}`}>Wager contest</Button>
+          <Button onClick={() => setLatestBtnActive(0)} className={`flex-1 ${latestBtnActive == 0 ? 'bg-[#2D3035]' : 'bg-transparent'}`} hover={true}>My Bets</Button>
+          <Button onClick={() => setLatestBtnActive(1)} className={`flex-1 ${latestBtnActive == 1 ? 'bg-[#2D3035]' : 'bg-transparent'}`} hover={true}>History</Button>
+          <Button onClick={() => setLatestBtnActive(2)} className={`flex-1 ${latestBtnActive == 2 ? 'bg-[#2D3035]' : 'bg-transparent'}`} hover={true}>High roolers</Button>
+          <Button onClick={() => setLatestBtnActive(3)} className={`flex-1 ${latestBtnActive == 3 ? 'bg-[#2D3035]' : 'bg-transparent'}`} hover={true}>Wager contest</Button>
         </div>
 
         {
-          
           latestBtnActive == 0 ? (
             <div className='h-[600px] flex flex-col justify-center items-center'>
-              <Image className='w-[150px] h-[150px]' src={EmptyImg}></Image>
+              <Image className='w-[150px] h-[150px]' src={EmptyImg} alt=''></Image>
 
               <span className='text-text'>Oops! There is no data yet!</span>
             </div>

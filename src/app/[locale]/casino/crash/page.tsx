@@ -11,21 +11,23 @@ import Image from 'next/image';
 import LogoImg from '@/assets/casino/logo.avif'
 import '../../../styles/casino.css'
 import NavCrash from './_common/NavCrash';
+import BreadCrumb from '@/components/ui/breadCrumb';
 
 export default function CrashPage() {
     const [btnActive, setBtnActive] = useState(0)
-
+    const breadCrumbOption = [
+        {
+            name: 'BC Originals',
+            to: '/casino/picks'
+        },
+        {
+            name: 'Crash'
+        }
+    ]
 
 	return (
 		<div className='max-page-container'>
-			<div className='flex'>
-                <div className='flex cursor-pointer items-center justify-center rounded-[4px] bg-[#1D1E22] px-[18px] py-2 my-4 text-[14px] text-[#98A7B5] transition-[300] hover:bg-[#2D3035]  hover:text-[#FFF]'>
-                    <div className='mr-2'>BC Originaux</div>
-                    <div className='mr-2'>></div>
-                    <div>Crash</div>
-                </div>
-            </div>
-
+            <BreadCrumb option={breadCrumbOption} />
             <div className='mb-4'>
                 <div className='h-[600px] bg-black border-solid border-b-[3px] border-[#25262b]'></div>
                 <div className='bg-black px-4 py-2 flex justify-between'>

@@ -21,6 +21,8 @@ const config: Config = {
 				subText: "var(--color-subText)",
 				title: "var(--color-title)",
 				text: "var(--color-text)",
+        '15xysm6': 'var(--15xysm6)',
+        '1q81als': 'var(--1q81als)',
       },
 
       fontFamily: {

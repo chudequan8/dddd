@@ -12,7 +12,6 @@ const AsideWrapper: FC<IAsideWrapperProps> = (props) => {
 	const { children, className, ...rest } = props;
 
 	const { asideStatus, messageStatus } = useTheme();
-	console.log(asideStatus, 'asideStatus');
 	
 	return (
 		<section

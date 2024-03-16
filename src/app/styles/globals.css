@@ -12,6 +12,7 @@
 
 body,
 aside,
+section,
 header,
 footer {
   background-color: var(--color-bg-primary);
@@ -131,6 +132,8 @@ input[type=number] {
   --color-primary: #3BC117;
   --color-yellow: #FFBF39;
   --color-body-bg: #fff;
+  --15xysm6: #F0F1F5;
+  --1q81als: #EAECF3;
 }
 
 .theme-default.dark {
@@ -140,6 +143,16 @@ input[type=number] {
   --color-text: #98A7B5;
   --color-title: #ffffff;
   --color-sub-text: #656E78;
+  --15xysm6: rgba(0,0,0,.2);
+  --1q81als: #1E2024;
+}
+
+a {
+  color: inherit;
+}
+a:hover,
+a:active {
+  color: inherit;
 }
 
 @media (min-width: 768px) {
