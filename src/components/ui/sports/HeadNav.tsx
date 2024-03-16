@@ -44,23 +44,27 @@ export default function HeadNav() {
       {navList.map((nav, index) => {
         return (
           <>
-            {index === navList.length - 1 && <div className="flex-1" key={index}></div>}
+            {index === navList.length - 1 && (
+              <div className="flex-1" key={index}></div>
+            )}
             <Link key={nav.name} className="w-12 h-12 p-2" href={nav.to}>
-              <svg
-                data-cy={`ic-${nav.name}`}
-                width={32}
-                height={32}
-                viewBox="0 0 32 32"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{
-                  fill: "currentcolor",
-                  color: "inherit",
-                  width: "auto",
-                  height: 32,
-                }}
-              >
-                {nav.icon}
-              </svg>
+              <div className="tooltip z-50" data-tip={nav.name}>
+                <svg
+                  data-cy={`ic-${nav.name}`}
+                  width={32}
+                  height={32}
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{
+                    fill: "currentcolor",
+                    color: "inherit",
+                    width: "auto",
+                    height: 32,
+                  }}
+                >
+                  {nav.icon}
+                </svg>
+              </div>
             </Link>
           </>
         );
