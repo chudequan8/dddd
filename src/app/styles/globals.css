@@ -134,6 +134,9 @@ input[type=number] {
   --color-body-bg: #fff;
   --15xysm6: #F0F1F5;
   --1q81als: #EAECF3;
+  --1h443ei: #fff;
+  --whdmoy: #31373d;
+  --mk9uba: #F6F7FA;
 }
 
 .theme-default.dark {
@@ -145,6 +148,9 @@ input[type=number] {
   --color-sub-text: #656E78;
   --15xysm6: rgba(0,0,0,.2);
   --1q81als: #1E2024;
+  --1h443ei: #2D3035;
+  --whdmoy: #31373d;
+  --mk9uba: rgba(49,52,60,.6);
 }
 
 a {
@@ -155,6 +161,15 @@ a:active {
   color: inherit;
 }
 
+.s-conic {
+  color: #fff !important;
+  background-color: #1d803ab3 !important;
+  background-image: conic-gradient(from 1turn,rgba(88,175,16,1),rgba(29,128,58,1)) !important;
+}
+
+.s-conic:hover {
+  background-image: conic-gradient(from 1turn,rgba(88,175,16,.7),rgba(29,128,58,.7));
+}
 @media (min-width: 768px) {
   ::-webkit-scrollbar {
       width:var(--scrollbar-size);

@@ -192,7 +192,8 @@ const Button = React.forwardRef(function (props: any, ref) {
 		className,
 	)
 	if (log) {
-		console.log(props, 'props');
+		console.log(props, 'log props');
+		console.log(classes, 'log classes');
 		
 	}
     return (

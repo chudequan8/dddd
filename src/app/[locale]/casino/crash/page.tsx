@@ -5,13 +5,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Icon from '@/components/icon/Icon';
-import { CasinoLoveIcon, CasinoStarIcon, CasinoShareIcon, CasinoJIcon, CasinoRichIcon, CasinoQuestionIcon } from '@/components/icon/common';
+import { CasinoLoveIcon, CasinoStarIcon, CasinoJIcon, CasinoRichIcon, CasinoQuestionIcon } from '@/components/icon/common';
 import Button from '@/components/ui/Button';
 import Image from 'next/image';
 import LogoImg from '@/assets/casino/logo.avif'
 import '../../../styles/casino.css'
 import NavCrash from './_common/NavCrash';
-import BreadCrumb from '@/components/ui/breadCrumb';
+import BreadCrumb from '@/components/ui/BreadCrumb';
 
 export default function CrashPage() {
     const [btnActive, setBtnActive] = useState(0)

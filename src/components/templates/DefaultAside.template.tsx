@@ -22,7 +22,9 @@ const DefaultAsideTemplate = () => {
 					<div className='w-full rounded-[4px] bg-[#F6F7FA] py-[8px] dark:bg-[#24262B]'>
 
 						<div className='flex h-[42px]  w-full items-center justify-between gap-[8px] px-[8px] '>
-							<div className='qeust-bg flex h-full w-full  items-center  rounded-[4px]'>
+							<div className='qeust-bg flex h-full w-full  items-center rounded-[4px] cursor-pointer' style={{
+                background: 'linear-gradient(26.79deg,rgba(109,43,255,.480402) 1.86%,rgba(109,43,255,.04) 85.25%,rgba(109,43,255,.04) 85.25%),rgba(216,216,216,.05)'
+              }}>
 								<Image className='ml-[10px] w-[38px]' src={question} alt=''></Image>
 
 								<div className='text-[10px] font-[700] text-[#000] dark:text-[#fff]'>
@@ -30,7 +32,9 @@ const DefaultAsideTemplate = () => {
 								</div>
 							</div>
 
-							<div className='spin-bg flex h-full w-full items-center   rounded-[4px]'>
+							<div className='spin-bg flex h-full w-full items-center rounded-[4px] cursor-pointer' style={{
+                background: 'linear-gradient(19.92deg,rgba(175,13,132,.511772) -6.45%,rgba(175,13,132,.04) 78.77%),rgba(216,216,216,.05)'
+              }}>
 								<Image className='ml-[10px] w-[38px]' src={question} alt=''></Image>
 
 								<div className='text-[10px] font-[700] text-[#000] dark:text-[#fff]'>

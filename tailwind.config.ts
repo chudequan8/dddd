@@ -23,6 +23,9 @@ const config: Config = {
 				text: "var(--color-text)",
         '15xysm6': 'var(--15xysm6)',
         '1q81als': 'var(--1q81als)',
+        '1h443ei': 'var(--1h443ei)',
+        'whdmoy': 'var(--whdmoy)',
+        'mk9uba': 'var(--mk9uba)',
       },
 
       fontFamily: {
