@@ -6,11 +6,15 @@
   --scrollbar-size: 6px;
   --left-menu-width: 292px;
   --left-menu-rail-width: 6.8rem;
-  --topbar-height: 6.8rem
+  --topbar-height: 6.8rem;
+  font-size: 0.875rem;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+body,
+aside,
+header,
+footer {
+  background-color: var(--color-bg-primary);
 }
 
 img {
@@ -19,6 +23,11 @@ img {
 
 .bottom-shadow {
   position: relative;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
 }
 
 .bottom-shadow::after {
@@ -118,8 +127,10 @@ input[type=number] {
 }
 
 .theme-default {
+  --color-bg-primary: #F6F7FA;
   --color-primary: #3BC117;
   --color-yellow: #FFBF39;
+  --color-body-bg: #fff;
 }
 
 .theme-default.dark {

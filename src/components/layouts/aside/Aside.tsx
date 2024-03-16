@@ -80,10 +80,9 @@ const Aside: FC<IAsideProps> = (props) => {
         "peer",
         "fixed bottom-0 top-0 z-30 md:z-20",
         "flex flex-col",
-        "border-zinc-300/25 bg-white",
+        "border-zinc-300/25",
         "py-4 shadow-2xl",
         "ltr:border-r rtl:border-l",
-        "dark:bg-dark-blue dark:text-white",
         themeConfig.transition,
         className,
         // Mobile Design

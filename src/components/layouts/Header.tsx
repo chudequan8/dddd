@@ -70,10 +70,8 @@ const Header: FC<IHeaderProps> = (props) => {
         className={classNames(
           "sticky top-0 z-10 px-4 md:px-12",
           "flex justify-between gap-4",
-          "bg-white",
           "p-4 bottom-shadow",
           "backdrop-blur-md",
-          "dark:bg-dark-blue dark:text-white",
           className
         )}
         {...rest}

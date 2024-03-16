@@ -1,5 +1,5 @@
 import React from "react";
-import { asidePages, appPages } from "@/config/pages.config";
+import { asidePages } from "@/config/pages.config";
 import { useRouter } from "next/navigation";
 import Aside, { AsideBody, AsideHead } from "../layouts/aside/Aside";
 import Nav, { NavCollapse, NavItem } from "../layouts/Nav";
@@ -20,8 +20,6 @@ const DefaultAsideTemplate = () => {
         <Nav>
 
 					<div className='w-full rounded-[4px] bg-[#F6F7FA] py-[8px] dark:bg-[#24262B]'>
-						<NavItem {...appPages.crmAppPages.subPages.crmDashboardPage}>
-						</NavItem>
 
 						<div className='flex h-[42px]  w-full items-center justify-between gap-[8px] px-[8px] '>
 							<div className='qeust-bg flex h-full w-full  items-center  rounded-[4px]'>

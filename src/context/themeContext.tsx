@@ -54,9 +54,11 @@ export const ThemeContextProvider: FC<IThemeContextProviderProps> = ({ children 
 	/**
 	 * Dark Mode
 	 */
-	const [darkModeStatus, setDarkModeStatus] = useLocalStorageState<DarkModeType.DarkMode>(STORAGE.THEME, {
-		defaultValue: themeConfig.theme
-	});
+	const [darkModeStatus, setDarkModeStatus] = useLocalStorageState<DarkModeType.DarkMode | null>(
+		((typeof window !== 'undefined' && localStorage.getItem('theme')) ||
+			themeConfig.theme) as DarkModeType.DarkMode,
+	);
+	
 	const [isDarkTheme, setIsDarkTheme] = useState<boolean>(darkModeStatus === DARK_MODE.DARK);
 	useEffect(() => {
 		localStorage.setItem('theme', darkModeStatus as string);
