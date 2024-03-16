@@ -81,7 +81,7 @@ export const headMenuPages: PagesType.Pages = [
     icon: "SvgHome",
   },
   {
-    to: "/sports",
+    to: "/sports/liveEvents",
     text: "sports",
     icon: "icon-menu-real-casino",
   },
