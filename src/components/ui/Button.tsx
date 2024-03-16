@@ -26,9 +26,10 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
 	size?: TButtonSize;
 	variant?: TButtonVariants;
 	hover?: boolean
+	log?: boolean
 }
 
-const DefButton = React.forwardRef(function (props: any, ref) {
+const Button = React.forwardRef(function (props: any, ref) {
     const {
         onClick,
 		borderWidth = themeConfig.borderWidth,
@@ -42,9 +43,10 @@ const DefButton = React.forwardRef(function (props: any, ref) {
 		isLoading = false,
 		rightIcon,
 		rounded = themeConfig.rounded,
-		size = 'default',
+		size = 'sm',
 		variant = 'default',
 		hover = false,
+		log,
 		...rest
     } = props
 
@@ -92,7 +94,6 @@ const DefButton = React.forwardRef(function (props: any, ref) {
 		),
 		default: classNames(
 			// Default
-			'bg-transparent',
 			{ 'text-zinc-600 dark:text-zinc-400': !isActive },
 			[`${borderWidth}`],
 			'border-transparent',
@@ -141,7 +142,7 @@ const DefButton = React.forwardRef(function (props: any, ref) {
 					'px-1.5': !HAS_CHILDREN,
 				},
 				'py-1.5',
-				'text-base',
+				'text-md',
 			),
 			icon: classNames({ 'ltr:mr-1.5 rtl:ml-1.5': HAS_CHILDREN }, 'text-[1.25rem]'),
 			rightIcon: classNames('ltr:ml-1.5', 'rtl:mr-1.5', 'text-[1.25rem]'),
@@ -181,7 +182,7 @@ const DefButton = React.forwardRef(function (props: any, ref) {
 	const btnDisabledClasses = 'opacity-50 pointer-events-none';
 	const classes = classNames(
 		hover ?
-			'flex cursor-pointer items-center justify-center rounded-[4px] bg-[#1D1E22] px-[18px] py-3 text-[14px] text-[#98A7B5] transition-[300] hover:bg-[#2D3035]  hover:text-[#FFF]' :
+			'flex cursor-pointer items-center justify-center rounded-[4px] bg-15xysm6 px-[18px] py-3 text-[14px] text-[#98A7B5] transition-[300] hover:bg-[#2D3035]  hover:text-[#FFF]' :
 			'inline-flex items-center justify-center',
 		btnVariantClasses,
 		btnSizeClasses,
@@ -190,6 +191,11 @@ const DefButton = React.forwardRef(function (props: any, ref) {
 		{ [`${btnDisabledClasses}`]: isDisable || isLoading },
 		className,
 	)
+	if (log) {
+		console.log(props, 'log props');
+		console.log(classes, 'log classes');
+		
+	}
     return (
         <button ref={ref} data-component-name='Button' type='button' className={classes} onClick={onClick} {...rest}>
 			{
@@ -205,6 +211,6 @@ const DefButton = React.forwardRef(function (props: any, ref) {
     )
 })
 
-DefButton.displayName = 'DefButton'
+Button.displayName = 'Button'
 
-export default DefButton
+export default Button

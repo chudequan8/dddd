@@ -146,17 +146,16 @@ const NavCrash = () => {
       <div className='text-title text-2xl my-8 mb-4'>Latest bet & Race</div>
       <div className='p-4 bg-[#2b2f37]'>
         <div className='w-full bg-[#191b1f] flex p-1 gap-2'>
-          <Button onClick={() => setLatestBtnActive(0)} className={`flex-1 ${latestBtnActive == 0 ? 'bg-[#2D3035]' : 'bg-transparent'}`}>My Bets</Button>
-          <Button onClick={() => setLatestBtnActive(1)} className={`flex-1 ${latestBtnActive == 1 ? 'bg-[#2D3035]' : 'bg-transparent'}`}>History</Button>
-          <Button onClick={() => setLatestBtnActive(2)} className={`flex-1 ${latestBtnActive == 2 ? 'bg-[#2D3035]' : 'bg-transparent'}`}>High roolers</Button>
-          <Button onClick={() => setLatestBtnActive(3)} className={`flex-1 ${latestBtnActive == 3 ? 'bg-[#2D3035]' : 'bg-transparent'}`}>Wager contest</Button>
+          <Button onClick={() => setLatestBtnActive(0)} className={`flex-1 !text-base ${latestBtnActive == 0 ? 'bg-[#2D3035]' : 'bg-transparent'}`} hover={true}>My Bets</Button>
+          <Button onClick={() => setLatestBtnActive(1)} className={`flex-1 !text-base ${latestBtnActive == 1 ? 'bg-[#2D3035]' : 'bg-transparent'}`} hover={true}>History</Button>
+          <Button onClick={() => setLatestBtnActive(2)} className={`flex-1 !text-base ${latestBtnActive == 2 ? 'bg-[#2D3035]' : 'bg-transparent'}`} hover={true}>High roolers</Button>
+          <Button onClick={() => setLatestBtnActive(3)} className={`flex-1 !text-base ${latestBtnActive == 3 ? 'bg-[#2D3035]' : 'bg-transparent'}`} hover={true}>Wager contest</Button>
         </div>
 
         {
-          
           latestBtnActive == 0 ? (
             <div className='h-[600px] flex flex-col justify-center items-center'>
-              <Image className='w-[150px] h-[150px]' src={EmptyImg}></Image>
+              <Image className='w-[150px] h-[150px]' src={EmptyImg} alt=''></Image>
 
               <span className='text-text'>Oops! There is no data yet!</span>
             </div>
@@ -165,21 +164,35 @@ const NavCrash = () => {
           ) : latestBtnActive == 2 ? (
             <Table className='mt-4' columns={columnsHigh} dataSource={dataHigh} pagination={{}} />
           ) : (
-            <div className=''>
-              <div className='flex bg-standard'>
-                <div className='flex-1 gap-3 flex items-center p-4 bg-primary rounded-md'>
-                  <Image className='w-[180px] fit-contain' src={TrophyImg} alt='' />
+            <div className='p-4 bg-standard rounded-md'>
+              <div className='flex gap-3'>
+                <div className='gap-3 flex items-center p-4 bg-primary rounded-md' style={{
+                  flex: '4 1 0%'
+                }}>
+                  <div className='flex-1 flex justify-center'>
+                    <Image className='w-[180px] fit-contain' src={TrophyImg} alt='' />
+                  </div>
                   <div>
-                    <div className='flex text-[#3bc117] items-center'>
-                      <Image className='w-3 h-8' src={GrassLeft} alt='' />
-                      <span className='mx-4'>Daily</span>
-                      <Image className='w-3 h-8' src={GrassRight} alt='' />
+                    <div className='flex text-[#3bc117] items-center mt-4'>
+                      <Image className='w-4 h-8' src={GrassLeft} alt='' />
+                      <span className='mx-4 text-xl'>Daily</span>
+                      <Image className='w-4 h-8' src={GrassRight} alt='' />
                     </div>
-                    <div>Contest prize pool</div>
+                    <div className='my-4'>Contest prize pool</div>
+                    <Button className='!text-yellow !text-2xl !bg-1h443ei w-64 !justify-start' log>
+                      $21,083.62
+                    </Button>
                   </div>
                 </div>
-                <div className='flex-1'></div>
-                <div className='flex-1'></div>
+                <div className='flex-1 bg-mk9uba rounded-md flex flex-col justify-center items-center' style={{
+                  flex: '3 1 0%'
+                }}>
+                  <div className='text-sm'>Who's the invincible champion at the high table? Let's<br/> see what a badass you can be!</div>
+                  <Button className='s-conic !w-3/4 !py-4 !border-0'>Participate Now</Button>
+                </div>
+                <div className='flex-1' style={{
+                  flex: '3 1 0%'
+                }}></div>
               </div>
             </div>
           )
