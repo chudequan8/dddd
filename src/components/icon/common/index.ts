@@ -16,6 +16,10 @@ export { default as HeroInformationCircle } from './InformationCircle';
 export { default as HeroLanguage } from './Language';
 export { default as HeroChevronRight } from './ChevronRight';
 
+export { default as CasinoQuestionSvg } from './game/QuestionSVG';
+export { default as CasinoWinnerSvg } from './game/WinnerSvg';
+export { default as CasinoWinnerMSvg } from './game/WinnerMSvg';
+
 // Sports Icon
 export { default as SvgHome } from './sprots-icons/Home'
 export { default as SvgLive } from './sprots-icons/SportsLive'

@@ -51,10 +51,10 @@ export default function CrashPage() {
             </div>
 
             <div>
-                <div className='flex gap-3'>
-                    <Button onClick={() => setBtnActive(0)} className={`text-white ${btnActive == 0 ? '' : ''}`}>Crash</Button>
-                    <Button onClick={() => setBtnActive(1)} className={`text-white ${btnActive == 1 ? '' : ''}`}>Description</Button>
-                    <Button onClick={() => setBtnActive(2)} className={`text-white ${btnActive == 2 ? '' : ''}`}>Reviews</Button>
+                <div className='flex'>
+                    <Button onClick={() => setBtnActive(0)} className={`bg-standard !px-6 !py-4 ${btnActive == 0 ? '!bg-bv38jy !text-title font-bold' : ''}`}>Crash</Button>
+                    <Button onClick={() => setBtnActive(1)} className={`bg-standard !px-6 !py-4 ${btnActive == 1 ? '!bg-bv38jy !text-title font-bold' : ''}`}>Description</Button>
+                    <Button onClick={() => setBtnActive(2)} className={`bg-standard !px-6 !py-4 ${btnActive == 2 ? '!bg-bv38jy !text-title font-bold' : ''}`}>Reviews</Button>
                 </div>
 
                 {

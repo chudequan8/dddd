@@ -14,6 +14,7 @@ const config: Config = {
         "dark-blue": "#003366",
         "dark-blue-light": "rgba(51, 144, 255, .08)",
         "dark-blue-hover": "rgba(51, 144, 255, .2)",
+        // primary: 'var(--color-primary)',
         primary: 'var(--color-bg-primary)',
 				yellow: "var(--color-yellow)",
 				standard: "var(--color-standard)",
@@ -26,11 +27,15 @@ const config: Config = {
         '1h443ei': 'var(--1h443ei)',
         'whdmoy': 'var(--whdmoy)',
         'mk9uba': 'var(--mk9uba)',
+        'bv38jy': 'var(--bv38jy)'
       },
 
       fontFamily: {
         sans: ['var(--font-saira)', 'var(--font-roboto)', 'PingFangSC-Regular', 'Noto Sans SC', 'Microsoft YaHei', 'sans-serif'],
       },
+      textColor: {
+        primary: 'var(--color-primary)'
+      }
     },
   },
   safelist: [
