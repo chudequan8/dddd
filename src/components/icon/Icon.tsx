@@ -7,7 +7,6 @@ import { TColors } from '@/types/colors.type';
 import { TColorIntensity } from '@/types/colorIntensities.type';
 import { textColor } from '@/utils/textColor.util';
 import { TFontSizes } from '@/types/fontSizes.type';
-import { useTheme } from '@/context/themeContext';
 
 interface IRefWrapperProps extends Record<string, any> {
 	children: ReactNode;
@@ -30,9 +29,10 @@ export interface IIconProps extends HTMLAttributes<HTMLSpanElement> {
 	color?: TColors;
 	colorIntensity?: TColorIntensity;
 	size?: TFontSizes;
+	log?: boolean
 }
 const Icon = forwardRef<HTMLSpanElement, IIconProps>((props, ref) => {
-	const { icon, className, color, colorIntensity, size, ...rest } = props;
+	const { icon, className, color, colorIntensity, size, log, ...rest } = props;
 	const IconName = pascalcase(icon);
 	
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -49,6 +49,11 @@ const Icon = forwardRef<HTMLSpanElement, IIconProps>((props, ref) => {
 		textColor(color, colorIntensity),
 		className,
 	);
+
+	if (log) {
+		console.log(className, CLASS_NAMES, 'icon class log');
+		
+	}
 
 	return (
 		<RefWrapper ref={ref}>
