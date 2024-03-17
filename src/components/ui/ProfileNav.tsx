@@ -57,8 +57,8 @@ export const ProfileNav = (props:any) => {
 
     return <div className="bg-[#fff] rounded-sm py-4 px-3 mr-6 flex-1" style={{ maxWidth:'220px', }}>
         {
-            nav.map((item:any, index:number) => {
-                return <div key={index} className={ item.active ? 'h-11 pl-4 flex items-center bg-[#f5f6fa] font-bold cursor-pointer mb-2' : 'h-11 pl-4 flex items-center cursor-pointer mb-2' } style={{ boxSizing:'border-box' }}>
+            nav.map((item:any) => {
+                return <div className={ item.active ? 'h-11 pl-4 flex items-center bg-[#f5f6fa] font-bold cursor-pointer mb-2' : 'h-11 pl-4 flex items-center cursor-pointer mb-2' } style={{ boxSizing:'border-box' }}>
                     <Icon className="profile-svg mr-3" icon="HeroSportMenuIcon">
                     
                     </Icon>

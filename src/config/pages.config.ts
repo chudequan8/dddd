@@ -1,17 +1,17 @@
 export const asidePages: PagesType.Pages = [
   {
-    to: "/casino/picks",
+    to: "/casino",
     text: "Casino",
     icon: "icon-menu-sport",
     subPages: [
       {
-        to: "/casino/picks",
-        text: "AI Dashboard",
+        to: "/casino/gameList",
+        text: "Picks For You",
         icon: "https://media3.scdn.vn/img4/2023/05_17/yinpavnKTeNesRxwyq5x.png",
       },
       {
-        to: "/casino/crash",
-        text: "Chat Pages",
+        to: "/casino",
+        text: "Casino Pages",
         icon: "https://media3.scdn.vn/img4/2023/05_17/yinpavnKTeNesRxwyq5x.png",
       },
     ],
@@ -41,7 +41,7 @@ export const asidePages: PagesType.Pages = [
     ],
   },
   {
-    to: "",
+    to: "/bingo",
     text: "Bingo",
     icon: "icon-huodong",
   },

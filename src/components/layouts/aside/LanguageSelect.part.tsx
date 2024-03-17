@@ -70,7 +70,7 @@ const LanguageSelectBtnt = () => {
         tabIndex={0}
         className="flex w-full p-4 overflow-hidden rounded-xl bg-blue-light text-sm dark:bg-dark-blue-light"
       >
-        <Image src={IconLanguage} width={20} alt="" />
+        <Image src={IconLanguage} className="w-6 h-6" alt="" />
         {asideStatus && (
           <span className="overflow-hidden truncate whitespace-nowrap ml-3 text-base text-black dark:text-white">
             {t("Language")}
