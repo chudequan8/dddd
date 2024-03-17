@@ -149,6 +149,12 @@ img {
   --whdmoy: #31373d;
   --mk9uba: #F6F7FA;
   --bv38jy: #eaecf3;
+  --5l1a8f: #5F6975;
+  --1by3zu8: #BEC1CC;
+  --1nfs066: #9FA5AC;
+  --12v585s: #ffffff;
+  --a56fau: #31373D;
+  --6596nj: #F6F7FA;
 }
 
 .theme-default.dark {
@@ -164,8 +170,14 @@ img {
   --whdmoy: #31373d;
   --mk9uba: rgba(49,52,60,.6);
   --bv38jy: #2d3036;
-}
+  --5l1a8f: #98A7B5;
+  --1by3zu8: #4D565E;
+  --1nfs066: #67707B;
+  --12v585s: #1C1E22;
+  --a56fau: #D4D9E6;
+  --6596nj: #24262B;
 
+}
 
 .s-conic {
   color: #fff !important;
@@ -202,3 +214,10 @@ img {
   border-bottom: transparent;
   color: inherit;
 }
+
+div[aria-checked='false'] .anticon-star {
+  color: #67707b;
+}
+
+/* :where(.css-dev-only-do-not-override-1ae8k9u).ant-rate .ant-rate-star {
+} */

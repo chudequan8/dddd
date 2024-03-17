@@ -11,6 +11,8 @@ import Image from 'next/image';
 import LogoImg from '@/assets/casino/logo.avif'
 import '../../../styles/casino.css'
 import NavCrash from './_common/NavCrash';
+import Description from './_common/Description';
+import Reviews from './_common/Reviews';
 import BreadCrumb from '@/components/ui/BreadCrumb';
 
 export default function CrashPage() {
@@ -51,17 +53,17 @@ export default function CrashPage() {
             </div>
 
             <div>
-                <div className='flex'>
-                    <Button onClick={() => setBtnActive(0)} className={`bg-standard !px-6 !py-4 ${btnActive == 0 ? '!bg-bv38jy !text-title font-bold' : ''}`}>Crash</Button>
-                    <Button onClick={() => setBtnActive(1)} className={`bg-standard !px-6 !py-4 ${btnActive == 1 ? '!bg-bv38jy !text-title font-bold' : ''}`}>Description</Button>
-                    <Button onClick={() => setBtnActive(2)} className={`bg-standard !px-6 !py-4 ${btnActive == 2 ? '!bg-bv38jy !text-title font-bold' : ''}`}>Reviews</Button>
+                <div className='flex '>
+                    <Button onClick={() => setBtnActive(0)} className={`bg-standard !text-base !px-6 !py-4 ${btnActive == 0 ? '!bg-bv38jy !text-title font-bold' : ''}`}>Crash</Button>
+                    <Button onClick={() => setBtnActive(1)} className={`bg-standard !text-base !px-6 !py-4 ${btnActive == 1 ? '!bg-bv38jy !text-title font-bold' : ''}`}>Description</Button>
+                    <Button onClick={() => setBtnActive(2)} className={`bg-standard !text-base !px-6 !py-4 ${btnActive == 2 ? '!bg-bv38jy !text-title font-bold' : ''}`}>Reviews</Button>
                 </div>
 
                 {
                     btnActive == 0 ? <NavCrash /> : btnActive == 1 ? (
-                        <></>
+                        <Description></Description>
                     ) : (
-                        <></>
+                        <Reviews></Reviews>
                     )
                 }
                 <div className=''>

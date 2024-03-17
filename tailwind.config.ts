@@ -19,7 +19,7 @@ const config: Config = {
 				yellow: "var(--color-yellow)",
 				standard: "var(--color-standard)",
 				shadow: "var(--color-shadow)",
-				subText: "var(--color-subText)",
+				'sub-text': "var(--color-sub-text)",
 				title: "var(--color-title)",
 				text: "var(--color-text)",
         '15xysm6': 'var(--15xysm6)',
@@ -27,14 +27,23 @@ const config: Config = {
         '1h443ei': 'var(--1h443ei)',
         'whdmoy': 'var(--whdmoy)',
         'mk9uba': 'var(--mk9uba)',
-        'bv38jy': 'var(--bv38jy)'
+        'bv38jy': 'var(--bv38jy)',
+        '5l1a8f': 'var(--5l1a8f)',
+        '1by3zu8': 'var(--1by3zu8)',
+        '1nfs066': 'var(--1nfs066)',
+        '12v585s': 'var(--12v585s)',
+        'a56fau': 'var(--a56fau)',
+        '6596nj': 'var(--6596nj)',
       },
 
       fontFamily: {
         sans: ['var(--font-saira)', 'var(--font-roboto)', 'PingFangSC-Regular', 'Noto Sans SC', 'Microsoft YaHei', 'sans-serif'],
       },
       textColor: {
-        primary: 'var(--color-primary)'
+        primary: 'var(--color-primary)',
+      },
+      borderColor: {
+        primary: 'var(--color-primary)',
       }
     },
   },
