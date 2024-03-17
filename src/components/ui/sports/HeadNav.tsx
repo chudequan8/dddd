@@ -1,44 +1,32 @@
-import Link from "next/link";
+"use client"
 
-const navList = [
+import { CustomIcon, IconProps } from "@/components/icon/common";
+import classNames from "classnames";
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
+
+const navList: {
+  name:  IconProps["type"];
+  to: string;
+}[] = [
   {
     name: "home",
-    to: "/sports/home",
-    isActive: false,
-    icon: (
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M16.669 8.94762C16.2887 8.60535 15.7113 8.60535 15.331 8.94762L7.33104 16.1476C7.12032 16.3373 7 16.6074 7 16.8909V23.0002C7 23.5525 7.44772 24.0002 8 24.0002H11.2727C11.825 24.0002 12.2727 23.5525 12.2727 23.0002V21.6002C12.2727 19.9433 13.6159 18.6002 15.2727 18.6002H16.7273C18.3841 18.6002 19.7273 19.9433 19.7273 21.6002V23.0002C19.7273 23.5525 20.175 24.0002 20.7273 24.0002H24C24.5523 24.0002 25 23.5525 25 23.0002V16.8909C25 16.6074 24.8797 16.3373 24.669 16.1476L16.669 8.94762ZM13.9931 7.46104C15.134 6.43421 16.866 6.43421 18.0069 7.46104L26.0069 14.661C26.639 15.23 27 16.0405 27 16.8909V23.0002C27 24.657 25.6569 26.0002 24 26.0002H20.7273C19.0704 26.0002 17.7273 24.657 17.7273 23.0002V21.6002C17.7273 21.0479 17.2796 20.6002 16.7273 20.6002H15.2727C14.7204 20.6002 14.2727 21.0479 14.2727 21.6002V23.0002C14.2727 24.657 12.9296 26.0002 11.2727 26.0002H8C6.34315 26.0002 5 24.657 5 23.0002V16.8909C5 16.0405 5.36096 15.23 5.99311 14.661L13.9931 7.46104Z"
-      ></path>
-    ),
+    to: "/sports",
   },
   {
     name: "live",
-    to: "/sports/liveEvents",
-    isActive: false,
-    icon: (
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M5 8C2.79086 8 1 9.79086 1 12V20C1 22.2091 2.79086 24 5 24H27C29.2091 24 31 22.2091 31 20V12C31 9.79086 29.2091 8 27 8H5ZM3 12C3 10.8954 3.89543 10 5 10H27C28.1046 10 29 10.8954 29 12V20C29 21.1046 28.1046 22 27 22H5C3.89543 22 3 21.1046 3 20V12ZM7.888 13.4H6V19H10.416V17.536H7.888V13.4ZM13.4655 13.4H11.5775V19H13.4655V13.4ZM20.9984 13.4L18.6304 19H16.7744L14.4064 13.4H16.4384L17.7744 16.672L19.1424 13.4H20.9984ZM26.4823 19V17.576H23.6822V16.84H26.0502V15.48H23.6822V14.824H26.3783V13.4H21.8263V19H26.4823Z"
-      ></path>
-    ),
+    to: "/sports/live",
   },
   {
     name: "search",
     to: "",
-    icon: (
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M9.99999 14C9.99999 10.134 13.134 7 17 7C20.866 7 24 10.134 24 14C24 17.866 20.866 21 17 21C13.134 21 9.99999 17.866 9.99999 14ZM17 5C12.0294 5 7.99999 9.02944 7.99999 14C7.99999 16.2926 8.85719 18.3849 10.2686 19.9741L5.29289 24.9497C4.90237 25.3403 4.90237 25.9734 5.29289 26.364C5.68342 26.7545 6.31658 26.7545 6.70711 26.364L11.7559 21.3152C13.2325 22.3756 15.0433 23 17 23C21.9706 23 26 18.9706 26 14C26 9.02944 21.9706 5 17 5Z"
-      ></path>
-    ),
   },
 ];
 
 export default function HeadNav() {
+
+  const pathname = usePathname()
+
   return (
     <div className="w-full h-16 p-2 flex items-center justify-between bg-white dark:bg-dark-blue dark:text-white">
       {navList.map((nav, index) => {
@@ -47,23 +35,11 @@ export default function HeadNav() {
             {index === navList.length - 1 && (
               <div className="flex-1" key={index}></div>
             )}
-            <Link key={nav.name} className="w-12 h-12 p-2" href={nav.to}>
+            <Link key={nav.name} className={classNames(pathname === nav.to && 'text-primary', "w-12 h-12 p-2 hover:text-primary")} href={nav.to}>
               <div className="tooltip z-50" data-tip={nav.name}>
-                <svg
-                  data-cy={`ic-${nav.name}`}
-                  width={32}
-                  height={32}
-                  viewBox="0 0 32 32"
-                  xmlns="http://www.w3.org/2000/svg"
-                  style={{
-                    fill: "currentcolor",
-                    color: "inherit",
-                    width: "auto",
-                    height: 32,
-                  }}
-                >
-                  {nav.icon}
-                </svg>
+                <CustomIcon type={nav.name} svgProps={{
+                  className: 'w-[32px] h-[32px]'
+                }} />
               </div>
             </Link>
           </>
