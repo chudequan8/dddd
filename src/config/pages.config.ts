@@ -17,7 +17,7 @@ export const asidePages: PagesType.Pages = [
     ],
   },
   {
-    to: "/sports/liveEvents",
+    to: "",
     text: "Sports",
     icon: "icon-menu-real-casino",
     subPages: [
