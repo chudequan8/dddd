@@ -127,6 +127,17 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+a {
+  color: inherit;
+}
+a:hover,
+a:active {
+  color: inherit;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
 .theme-default {
   --color-bg-primary: #F6F7FA;
   --color-primary: #3BC117;
@@ -176,6 +187,12 @@ input[type=number] {
 
 .s-conic:hover {
   background-image: conic-gradient(from 1turn,rgba(88,175,16,.7),rgba(29,128,58,.7));
+}
+
+.max-page-container {
+  max-width: 1340px;
+  width: 100%;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   ::-webkit-scrollbar {

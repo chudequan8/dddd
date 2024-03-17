@@ -303,10 +303,10 @@ export const NavCollapse: FC<INavCollapseProps> = (props) => {
             <div>
               <Image
                 src={IconArrow}
-                width={18}
                 alt=""
                 className={classNames(
-                  "text-1xl",
+                  "text-xl",
+                  "w-6 h-6",
                   {
                     "rotate-90": isActive,
                   }

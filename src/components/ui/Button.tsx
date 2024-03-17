@@ -29,7 +29,7 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
 	log?: boolean
 }
 
-const Button = React.forwardRef(function (props: any, ref) {
+const Button = React.forwardRef(function (props: IButtonProps, ref) {
     const {
         onClick,
 		borderWidth = themeConfig.borderWidth,

@@ -14,6 +14,7 @@ const config: Config = {
         "dark-blue": "#003366",
         "dark-blue-light": "rgba(51, 144, 255, .08)",
         "dark-blue-hover": "rgba(51, 144, 255, .2)",
+        // primary: 'var(--color-primary)',
         primary: 'var(--color-bg-primary)',
 				yellow: "var(--color-yellow)",
 				standard: "var(--color-standard)",

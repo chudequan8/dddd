@@ -39,6 +39,7 @@ const Icon = forwardRef<HTMLSpanElement, IIconProps>((props, ref) => {
 	// @ts-ignore
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	let CommonIconWrapper = CommonIcon[IconName]
+	
 	if (CommonIconWrapper == undefined) {
 		CommonIconWrapper = CommonIcon['Nav1'];
 	}
