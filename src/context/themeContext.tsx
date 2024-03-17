@@ -6,6 +6,7 @@ import React, {
 	ReactNode,
 	useContext,
 	useEffect,
+	useLayoutEffect,
 	useMemo,
 	useState
 } from 'react';
@@ -60,16 +61,16 @@ export const ThemeContextProvider: FC<IThemeContextProviderProps> = ({ children 
 	);
 	
 	const [isDarkTheme, setIsDarkTheme] = useState<boolean>(darkModeStatus === DARK_MODE.DARK);
-	useEffect(() => {
+	useLayoutEffect(() => {
 		localStorage.setItem('theme', darkModeStatus as string);
 		if (
 			localStorage.getItem('theme') === DARK_MODE.DARK
 		) {
 			document.documentElement.classList.add(DARK_MODE.DARK);
-			setIsDarkTheme(true);
+			// setIsDarkTheme(true);
 		} else {
 			document.documentElement.classList.remove(DARK_MODE.DARK);
-			setIsDarkTheme(false);
+			// setIsDarkTheme(false);
 		}
 	}, [darkModeStatus]);
 

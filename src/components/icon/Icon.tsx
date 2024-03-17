@@ -33,7 +33,6 @@ export interface IIconProps extends HTMLAttributes<HTMLSpanElement> {
 }
 const Icon = forwardRef<HTMLSpanElement, IIconProps>((props, ref) => {
 	const { icon, className, color, colorIntensity, size, ...rest } = props;
-	const { isDarkTheme } = useTheme()
 	const IconName = pascalcase(icon);
 	
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment

@@ -1,32 +1,22 @@
 'use client';
 
 import React, { useState } from 'react';
-import Dropdown, {
-	DropdownItem,
-	DropdownMenu,
-	DropdownToggle,
-} from './Dropdown';
 import Button from '@/components/ui/Button';
 import ButtonGroup from '@/components/ui/ButtonGroup';
-import DARK_MODE from '@/constants/darkMode.constant';
 import useFontSize from '@/hooks/useFontSize';
-import useDarkMode from '@/hooks/useDarkMode';
-import { Modal, ConfigProvider, Tabs, Checkbox } from 'antd';
+import { Modal, ConfigProvider } from 'antd';
 import type { TabsProps } from 'antd';
-import { GoogleOutlined } from '@ant-design/icons';
 import loginLeft from '@/assets/login/signup.webp';
 import Image from 'next/image';
 import themeConfig from '@/config/theme.config';
 import classNames from 'classnames';
 import useColorIntensity from '@/hooks/useColorIntensity';
 import Input from '@/components/form/Input';
-import Icon from '@/components/icon/Icon';
 
 
 const loginModal = () => {
 	const { fontSize, setFontSize } = useFontSize();
 	const [show, setShow] = useState(false);
-	const { darkModeStatus, setDarkModeStatus } = useDarkMode();
 	const items: TabsProps['items'] = [
 		{
 			key: 'Email',
