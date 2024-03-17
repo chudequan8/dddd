@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import evolution from '@/newAssets/img/evolution.avif';
 import Image from 'next/image';
-import ArrowDownGray from '../../../../../SvgIcons/ArrowDownGray.svg';
+import ArrowDownGray from '../../../../SvgIcons/ArrowDownGray.svg';
 import BcOriginals from './_common/BcOriginals';
 import Slots from './_common/Slots';
 import FeatureBuyIn from './_common/FeatureBuyIn';
@@ -10,7 +10,6 @@ import LiveCasion from './_common/LiveCasion';
 // import { SearchPartial } from "@/components/layouts/Headers/Search.partial";
 import "@/style/common.css"
 import Button from '@/components/ui/Button'
-import { Nav1, Nav2, Nav3, Nav4, Nav5, Nav6, Nav7 } from '@/components/icon/common';
 
 import { Controller, Pagination, Scrollbar, Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -81,13 +80,13 @@ export default function PickPage() {
 
 					<div className='mt-[10px] flex items-center'>
 						
-						<Button icon={Nav1} onClick={navCLickHandle} className="mr-2" hover>Lobby</Button>
-						<Button icon={Nav2} onClick={navCLickHandle} className="mr-2" hover>Top Picks</Button>
-						<Button icon={Nav3} onClick={navCLickHandle} className="mr-2" hover>Slots</Button>
-						<Button icon={Nav4} onClick={navCLickHandle} className="mr-2" hover>Hot Games</Button>
-						<Button icon={Nav5} onClick={navCLickHandle} className="mr-2" hover>Live Casino</Button>
-						<Button icon={Nav6} onClick={navCLickHandle} className="mr-2" hover>Table Games</Button>
-						<Button icon={Nav7} onClick={navCLickHandle} className="mr-2" hover>New Releases</Button>
+						<Button icon='Nav1' onClick={navCLickHandle} className="mr-2" hover>Lobby</Button>
+						<Button icon='Nav2' onClick={navCLickHandle} className="mr-2" hover>Top Picks</Button>
+						<Button icon='Nav3' onClick={navCLickHandle} className="mr-2" hover>Slots</Button>
+						<Button icon='Nav4' onClick={navCLickHandle} className="mr-2" hover>Hot Games</Button>
+						<Button icon='Nav5' onClick={navCLickHandle} className="mr-2" hover>Live Casino</Button>
+						<Button icon='Nav6' onClick={navCLickHandle} className="mr-2" hover>Table Games</Button>
+						<Button icon='Nav7' onClick={navCLickHandle} className="mr-2" hover>New Releases</Button>
 
 					</div>
 					<BcOriginals></BcOriginals>

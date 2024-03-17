@@ -5,11 +5,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Icon from '@/components/icon/Icon';
-import { CasinoLoveIcon, CasinoStarIcon, CasinoJIcon, CasinoRichIcon, CasinoQuestionIcon } from '@/components/icon/common';
 import Button from '@/components/ui/Button';
 import Image from 'next/image';
 import LogoImg from '@/assets/casino/logo.avif'
-import '../../../styles/casino.css'
+import '@/style/common.css'
 import NavCrash from './_common/NavCrash';
 import Description from './_common/Description';
 import Reviews from './_common/Reviews';
@@ -20,7 +19,7 @@ export default function CrashPage() {
     const breadCrumbOption = [
         {
             name: 'BC Originals',
-            to: '/casino/picks'
+            to: '/casino'
         },
         {
             name: 'Crash'
@@ -35,19 +34,19 @@ export default function CrashPage() {
                 <div className='bg-black px-4 py-2 flex justify-between'>
                     <div className='flex'>
                         <div className='flex px-4 py-2 items-center hover:bg-[#2D3035]  hover:text-[#FFF] cursor-pointer transition-[300] rounded-[4px]'>
-                            <Icon icon={CasinoStarIcon}></Icon> <span className='ml-2'>10086</span>
+                            <Icon icon='CasinoStarIcon'></Icon> <span className='ml-2'>10086</span>
                         </div>
                         <div className='flex px-4 py-2 items-center hover:bg-[#2D3035]  hover:text-[#FFF] cursor-pointer transition-[300] rounded-[4px]'>
-                            <Icon icon={CasinoLoveIcon}></Icon> <span className='ml-2'>72537</span>
+                            <Icon icon='CasinoLoveIcon'></Icon> <span className='ml-2'>72537</span>
                         </div>
                         <div className='flex px-4 py-2 items-center hover:bg-[#2D3035]  hover:text-[#FFF] cursor-pointer transition-[300] rounded-[4px]'>
-                            <Icon icon={CasinoLoveIcon}></Icon>
+                            <Icon icon='CasinoLoveIcon'></Icon>
                         </div>
                     </div>
                     <div className='flex'>
-                        <div className='px-4 py-2 hover:bg-[#2D3035]  hover:text-[#FFF] cursor-pointer transition-[300] rounded-[4px]'><Icon icon={CasinoJIcon}></Icon></div>
-                        <div className='px-4 py-2 hover:bg-[#2D3035]  hover:text-[#FFF] cursor-pointer transition-[300] rounded-[4px]'><Icon icon={CasinoRichIcon}></Icon></div>
-                        <div className='px-4 py-2 hover:bg-[#2D3035]  hover:text-[#FFF] cursor-pointer transition-[300] rounded-[4px]'><Icon icon={CasinoQuestionIcon}></Icon></div>
+                        <div className='px-4 py-2 hover:bg-[#2D3035]  hover:text-[#FFF] cursor-pointer transition-[300] rounded-[4px]'><Icon icon='CasinoJIcon'></Icon></div>
+                        <div className='px-4 py-2 hover:bg-[#2D3035]  hover:text-[#FFF] cursor-pointer transition-[300] rounded-[4px]'><Icon icon='CasinoRichIcon'></Icon></div>
+                        <div className='px-4 py-2 hover:bg-[#2D3035]  hover:text-[#FFF] cursor-pointer transition-[300] rounded-[4px]'><Icon icon='CasinoQuestionIcon'></Icon></div>
                     </div>
                 </div>
             </div>

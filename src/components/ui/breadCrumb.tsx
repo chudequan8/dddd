@@ -17,10 +17,10 @@ const BreadCrumb: FC<BreadCrumbProps> = (props) => {
     let optionLen = option.length-1
 	return (
         <div className='flex'>
-            <div className='flex cursor-pointer items-center justify-center rounded-[4px] bg-[#1D1E22] px-[18px] py-2 my-4 text-[14px] text-[#98A7B5] transition-[300] hover:bg-[#2D3035]  hover:text-[#FFF]'>
+            <div className='flex items-center justify-center rounded-md bg-1h443ei px-6 py-2 my-4 text-lg text-[#98A7B5] transition-[300]'>
                 {
                     option.map((t, i) => (<>
-                        <Link className='mr-2' href={t.to || ''} key={i}>{t.name}</Link>
+                        <Link className={i != optionLen ? 'mr-2' : 'text-title hover:text-title cursor-pointer'} href={t.to || ''} key={i}>{t.name}</Link>
                         { i != optionLen && (<div className='mr-2'>{split}</div>)}
                     </>))
                 }
