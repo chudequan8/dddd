@@ -1,7 +1,7 @@
 import React from 'react';
 import type { CarouselRef } from 'antd/lib/carousel';
 import { createRef } from 'react';
-import ArrowDownGray from '../../../../../SvgIcons/ArrowDownGray.svg';
+import ArrowDownGray from '@/assets/casino/ArrowDownGray.svg';
 import { Carousel } from 'antd';
 
 import Image from 'next/image';

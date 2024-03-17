@@ -155,6 +155,7 @@ img {
   --12v585s: #ffffff;
   --a56fau: #31373D;
   --6596nj: #F6F7FA;
+  --1f5xvoq: rgba(255,255,255,.66);
 }
 
 .theme-default.dark {
@@ -176,6 +177,7 @@ img {
   --12v585s: #1C1E22;
   --a56fau: #D4D9E6;
   --6596nj: #24262B;
+  --1f5xvoq: rgba(30,32,36,.36);
 }
 
 .s-conic {

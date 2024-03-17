@@ -29,6 +29,11 @@ export { default as CasinoChatPeoPle } from './game/ChatPeoPle';
 export { default as SvgHome } from './sprots-icons/Home'
 export { default as SvgLive } from './sprots-icons/SportsLive'
 
+// Bingo Icon
+export { default as BingoMoney } from './bingo/Money'
+export { default as BingoSetting } from './bingo/Setting'
+
+
 // Headers
 export { default as HeroChatBubbleLeftEllipsis } from './ChatBubbleLeftEllipsis';
 export { default as HeroCasinoMenuIcon } from "./CasinoMenuIcon"

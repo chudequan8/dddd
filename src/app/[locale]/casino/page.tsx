@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import evolution from '@/newAssets/img/evolution.avif';
 import Image from 'next/image';
-import ArrowDownGray from '../../../../SvgIcons/ArrowDownGray.svg';
+import ArrowDownGray from '@/assets/casino/ArrowDownGray.svg';
 import BcOriginals from './_common/BcOriginals';
 import Slots from './_common/Slots';
 import FeatureBuyIn from './_common/FeatureBuyIn';
