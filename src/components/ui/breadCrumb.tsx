@@ -24,8 +24,6 @@ const BreadCrumb: FC<BreadCrumbProps> = (props) => {
                         { i != optionLen && (<div className='mr-2'>{split}</div>)}
                     </>))
                 }
-                
-                
             </div>
         </div>
 	);
