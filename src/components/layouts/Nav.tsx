@@ -299,7 +299,9 @@ export const NavCollapse: FC<INavCollapseProps> = (props) => {
         >
           <div className={classNames("icon text-xl w-[2.5rem] text-[var(--primary-color)]", icon)}></div>
           <NavItemContent >
-            <NavItemText>{t(text)}</NavItemText>
+            <NavItemText>
+              <Link href={to}>{t(text)}</Link>
+            </NavItemText>
             <div>
               <Image
                 src={IconArrow}
