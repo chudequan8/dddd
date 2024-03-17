@@ -226,3 +226,22 @@ div[aria-checked='false'] .anticon-star {
 
 /* :where(.css-dev-only-do-not-override-1ae8k9u).ant-rate .ant-rate-star {
 } */
+
+.sports-module-container {
+  grid-template-areas:  "none none widget"
+                        "none none widget"
+                        "none none widget";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 1270px) {
+  .sports-module-container {
+    grid-template-areas:  "none widget"
+                        "none widget"
+                        "none widget";
+    grid-template-columns: 1fr 1fr;
+  }
+  .sports-module-container .last-card {
+    display: none;
+  }
+}

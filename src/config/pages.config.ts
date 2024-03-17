@@ -17,12 +17,12 @@ export const asidePages: PagesType.Pages = [
     ],
   },
   {
-    to: "",
+    to: "/sports",
     text: "Sports",
     icon: "icon-menu-real-casino",
     subPages: [
       {
-        to: "/sports/liveEvents",
+        to: "/sports/live",
         text: "Live Events",
         icon: "https://media3.scdn.vn/img4/2023/05_17/yinpavnKTeNesRxwyq5x.png",
       },
@@ -81,7 +81,7 @@ export const headMenuPages: PagesType.Pages = [
     icon: "SvgHome",
   },
   {
-    to: "/sports/liveEvents",
+    to: "/sports",
     text: "sports",
     icon: "icon-menu-real-casino",
   },
@@ -121,13 +121,13 @@ export const gamePages = {
 		subPages: {
 			liveEventsPage: {
 				id: 'liveEvents',
-				to: '/sports/liveEvents',
+				to: '/sports/live',
 				text: 'Live Events',
 				icon: 'SvgLive',
 			},
 			homePage: {
 				id: 'home',
-				to: '/sports/liveEvents',
+				to: '/sports',
 				text: 'Home',
 				icon: 'SvgHome',
 			},
