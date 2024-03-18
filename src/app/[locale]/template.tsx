@@ -18,21 +18,7 @@ const Template: FC<{
 
   return (
     <>
-      <div id="root">
-        <ThemeContextProvider>
-          <TranslationsProvider>
-            <AsideRouter />
-            <AsideWrapper>
-              <HeaderRouter />
-                {children}
-              <FooterRouter />
-            </AsideWrapper>
-            <MessagesPartial/>
-          </TranslationsProvider>
-        </ThemeContextProvider>
-      </div>
-      <div id="portal-root" />
-      <Toaster position="bottom-left" richColors  />
+      {children}
     </>
   )
 }
