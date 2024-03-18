@@ -3,7 +3,8 @@ import { CustomIcon, IconProps } from "@/components/icon/common";
 import team1Logo from "@/assets/sports/2824.png";
 import team2Logo from "@/assets/sports/4488.png";
 import classNames from "classnames";
-import GameCard, { GameCardProps } from "@/components/ui/sports/GameCard";
+import GameCard, { GameCardProps } from "./GameCard";
+import HotCombos from "./HotCombos";
 
 const navList: {
   type: IconProps["type"];
@@ -102,20 +103,19 @@ const teamCardList: GameCardProps[] = new Array(6).fill(0).map(() => ({
   ]
 }));
 
-export default function Live() {
+export default function UpcomingEvents() {
 
   return (
     <div className="mb-4">
       <div className="flex items-center mb-4 mt-6">
         <CustomIcon
-          type="radar"
-          size={16}
+          type="clock"
           svgProps={{
-            className: "w-[32px] h-[26px] mr-2 text-red-500",
+            className: "w-[32px] h-[26px] mr-2 text-sky-500",
           }}
         />
         <h3 className="text-[var(--text-color)] text-[22px] font-semibold">
-          Live
+            Upcoming Events
         </h3>
       </div>
       <div className="flex mb-4">
@@ -148,6 +148,11 @@ export default function Live() {
           {teamCardList.map((item, index) => (
             <GameCard {...item} key={index} />
           ))}
+          <div className="flex justify-self-stretch	min-w-0" style={{
+            gridArea: "widget"
+          }}>
+            <HotCombos /> 
+          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import team1Logo from "@/assets/sports/2824.png";
 import team2Logo from "@/assets/sports/4488.png";
 import classNames from "classnames";
 import GameCard, { GameCardProps } from "./GameCard";
+import HotCombos from "./HotCombos";
 
 const navList: {
   type: IconProps["type"];
@@ -105,7 +106,7 @@ const teamCardList: GameCardProps[] = new Array(6).fill(0).map(() => ({
 export default function TopMatches() {
 
   return (
-    <div>
+    <div className="mb-4">
       <div className="flex items-center mb-4 mt-6">
         <CustomIcon
           type="crown"
@@ -150,19 +151,7 @@ export default function TopMatches() {
           <div className="flex justify-self-stretch	min-w-0" style={{
             gridArea: "widget"
           }}>
-            <div className="relative w-full h-full rounded-lg bg-[#24262B]">
-              <div className="flex items-center justify-center mb-4 mt-6">
-                <CustomIcon
-                  type="file"
-                  svgProps={{
-                    className: "w-[32px] h-[32px] mr-2 text-red-600",
-                  }}
-                />
-                <h3 className="text-white text-[22px] font-semibold">
-                  Hot Combos
-                </h3>
-              </div>
-            </div>
+            <HotCombos /> 
           </div>
         </div>
       </div>

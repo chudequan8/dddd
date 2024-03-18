@@ -1,6 +1,8 @@
 import { CustomIcon, IconProps } from "@/components/icon/common";
 import Banner from "@/components/ui/sports/Banner";
+import LiveMatches from "@/components/ui/sports/LiveMatches";
 import TopMatches from "@/components/ui/sports/TopMatches";
+import UpcomingEvents from "@/components/ui/sports/UpcomingEvents";
 
 import classNames from "classnames";
 
@@ -47,6 +49,9 @@ export default function SportsHome() {
       </div>
       <Banner />
       <TopMatches />
+      <LiveMatches />
+      <Banner />
+      <UpcomingEvents />  
     </div>
   );
 }

@@ -234,7 +234,7 @@ div[aria-checked='false'] .anticon-star {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media (max-width: 1270px) {
+@media (max-width: 1450px) {
   .sports-module-container {
     grid-template-areas:  "none widget"
                         "none widget"
