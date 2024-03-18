@@ -6,5 +6,6 @@ namespace PagesType {
 		text: string;
 		icon: string;
 		subPages?: Pages
+		iconClassName?: string
 	}
 }
