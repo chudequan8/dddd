@@ -8,6 +8,7 @@ import LANG from "@/constants/lang.constant";
 import dayjs from "dayjs";
 import { useTheme } from "@/context/themeContext";
 import ThemeContext from '@/context/themeContext';
+import { LangType } from "@/types/lang.type";
 
 const LanguageSelectBtnt = () => {
 	const { setLanguage, setDir } = useContext(ThemeContext);

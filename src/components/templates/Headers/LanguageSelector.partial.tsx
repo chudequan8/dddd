@@ -3,7 +3,7 @@
 import React, { useContext, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
-import { TLang } from '@/types/lang.type';
+import {LangType} from '@/types/lang.type';
 import ThemeContext from '@/context/themeContext';
 import dayjs from 'dayjs';
 import Button from '@/components/ui/Button';
@@ -22,7 +22,7 @@ const LanguageSelectorPartial = () => {
 	const router = useRouter();
 	const currentPathname = usePathname();
 
-	const handleChange = (newLocale: TLang) => {
+	const handleChange = (newLocale: LangType.Lang) => {
 		// set cookie for next-i18n-router
 		const days = 30;
 		const date = new Date();

@@ -1,4 +1,4 @@
-import React, {HTMLAttributes, ReactNode} from "react";
+import React, {HTMLAttributes, ReactNode, forwardRef} from "react";
 import classNames from 'classnames';
 import Icon from "@/components/icon/Icon";
 import { TIcons } from '@/types/icons.type';
@@ -29,7 +29,7 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
 	log?: boolean
 }
 
-const Button = React.forwardRef(function (props: IButtonProps, ref) {
+const Button = forwardRef<HTMLButtonElement, IButtonProps>(function (props, ref) {
     const {
         onClick,
 		borderWidth = themeConfig.borderWidth,
@@ -52,7 +52,7 @@ const Button = React.forwardRef(function (props: IButtonProps, ref) {
 
     const HAS_CHILDREN = typeof children !== 'undefined';
 
-	const { textColor, shadeColorIntensity } = useColorIntensity(colorIntensity);
+	const { textColor, shadeColorIntensity } = useColorIntensity(colorIntensity as TColorIntensity);
 
 	/**
 	 * Variant & Color & Status

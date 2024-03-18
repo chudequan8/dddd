@@ -1,3 +1,5 @@
+import { LangType } from "@/types/lang.type";
+
 const LANG: Record<LangType.Lang, {
   text: string
   lng: LangType.Lang

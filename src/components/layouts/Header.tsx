@@ -2,7 +2,6 @@
 
 import React, { FC, HTMLAttributes, ReactNode, useRef } from "react";
 import classNames from "classnames";
-import { useThemeStore } from "@/stores";
 import useDomRect from "@/hooks/useDomRect";
 
 interface IHeaderLeftProps extends HTMLAttributes<HTMLDivElement> {

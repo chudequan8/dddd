@@ -154,12 +154,12 @@ interface INavItemProps extends HTMLAttributes<HTMLLIElement> {
   to?: string;
   className?: string;
   isSub?: boolean;
-  icon?: string
   iconClass?: string
+  icon?: string
 }
 export const NavItem: FC<INavItemProps> = (props) => {
-  const { children, iconClassName, text, to, className, icon, isSub, ...rest } = props;
-
+  const { children, iconClassName, text, to, className, isSub, ...rest } = props;
+  const icon = rest['icon']
   const { t } = useTranslation();
 
   const { asideStatus, setAsideStatus } = useTheme();
@@ -294,7 +294,7 @@ export const NavCollapse: FC<INavCollapseProps> = (props) => {
 
   const pathname = usePathname();
 
-  const here = to && to !== "/" && pathname.includes(to);
+  const here = !!(to && to !== "/" && pathname.includes(to));
 
   useEffect(() => {
     setIsActive(here);

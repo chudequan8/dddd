@@ -1,4 +1,5 @@
 import DARK_MODE from "../constants/darkMode.constant";
+import { LangType } from "@/types/lang.type";
 
 type TThemeConfigs = typeof themeConfig
 

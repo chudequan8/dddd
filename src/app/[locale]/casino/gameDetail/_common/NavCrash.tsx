@@ -22,10 +22,7 @@ const NavCrash = () => {
 
 
   interface DataType {
-    id: string;
-    result: string;
-    keys: string;
-    hash: string;
+    [prop: string]: any;
   }
 
   const columnsHistory: TableProps<DataType>['columns'] = [
@@ -118,7 +115,7 @@ const NavCrash = () => {
       render: (text, record, index) => (
         <div className={`flex items-center text-[#03b93e] justify-end`}>
           {text}
-          <Image className='w-6 h-6 ml-2' src={USDTImg} />
+          <Image className='w-6 h-6 ml-2' src={USDTImg} alt='' />
         </div>
       ),
     },
@@ -153,7 +150,7 @@ const NavCrash = () => {
       title: '#',
       dataIndex: 'name',
       key: 'name',
-      render: (text, record, index) => (
+      render: (text: any, record: any, index: number) => (
         <>
           {
             index == 0 ? <Image className='w-6 h-6' src={GoldImg} alt=''></Image> :
@@ -168,13 +165,13 @@ const NavCrash = () => {
       title: 'Player',
       dataIndex: 'player',
       key: 'player',
-      render: (text, record, index) => {
+      render: () => {
         return (
           <div className='flex items-center'>
             <div className='rounded-full overflow-hidden mr-4'>
               <Image src={AvatarImg} alt='' className='w-6 h-6'></Image>
             </div>
-            <Icon icon="CasinoWinnerMSvg" className='!w-3 !h-3' className='mr-1'></Icon>
+            <Icon icon="CasinoWinnerMSvg" className='!w-3 !h-3 mr-1'></Icon>
             Hidden
           </div>
         )
@@ -184,7 +181,7 @@ const NavCrash = () => {
       title: 'Wagered',
       dataIndex: 'wagered',
       key: 'wagered',
-      render: (text, record, index) => {
+      render: (text: string|number) => {
         return <div className='text-primary'>${text}</div>
       }
     },
@@ -192,7 +189,7 @@ const NavCrash = () => {
       title: 'Prize',
       dataIndex: 'prize',
       key: 'prize',
-      render: (text, record, index) => {
+      render: (text: string|number, record: any) => {
         console.log(text);
         
         return <div className='text-primary'>${text} <span>({record.pie})</span></div>

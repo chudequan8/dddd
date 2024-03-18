@@ -23,7 +23,7 @@ const TranslationsProvider = ({
   const [instance, setInstance] = useState(i18n);
   const currentLocale = useCurrentLocale(i18nConfig);
 
-  useEffect(() => {
+  // useEffect(() => {
     const init = async () => {
       if (!i18n) {
         const newInstance = await initTranslations(
@@ -42,7 +42,7 @@ const TranslationsProvider = ({
     init()
       .then(() => {})
       .catch(() => {});
-  }, [currentLocale])
+  // }, [currentLocale])
 
   if (!instance) {
     return fallback;
