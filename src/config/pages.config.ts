@@ -2,7 +2,7 @@ export const asidePages: PagesType.Pages = [
   {
     to: "/casino",
     text: "Casino",
-    icon: "1",
+    icon: "AsideNav4",
     subPages: [
       {
         to: "/casino/gameList",
@@ -19,7 +19,7 @@ export const asidePages: PagesType.Pages = [
   {
     to: "/sports",
     text: "Sports",
-    icon: "2",
+    icon: "AsideNav1",
     subPages: [
       {
         to: "/sports/live",
@@ -31,7 +31,7 @@ export const asidePages: PagesType.Pages = [
   {
     to: "",
     text: "Lottery",
-    icon: "3",
+    icon: "AsideNav2",
     subPages: [
       {
         to: "/lottery",
@@ -43,22 +43,22 @@ export const asidePages: PagesType.Pages = [
   {
     to: "/bingo",
     text: "Bingo",
-    icon: "1",
+    icon: "AsideNav5",
   },
   {
     to: "",
     text: "VIP Club",
-    icon: "1",
+    icon: "AsideNav8",
   },
   {
     to: "",
     text: "Affiliate",
-    icon: "4",
+    icon: "AsideNav9",
   },
   {
     to: "",
     text: "Sponsorships",
-    icon: "2",
+    icon: "AsideNav10",
     subPages: [
       {
         to: "/sponsorships/afa",
@@ -70,7 +70,8 @@ export const asidePages: PagesType.Pages = [
   {
     to: "/liveSupport",
     text: "Live Support",
-    icon: "2",
+    icon: "AsideNav11",
+    iconClassName: 'text-primary'
   },
 ];
 

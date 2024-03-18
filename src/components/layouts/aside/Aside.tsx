@@ -15,7 +15,7 @@ export const AsideHead: FC<IAsideHeadProps> = (props) => {
       data-component-name="Aside/AsideHead"
       style={{}}
       className={classNames(
-        "flex items-center justify-between px-6 pb-4 max-md:flex-row-reverse mb-6 bottom-shadow",
+        "flex items-center justify-between px-2 pb-4 max-md:flex-row-reverse mb-6 bottom-shadow",
         className
       )}
       {...rest}
@@ -36,7 +36,7 @@ export const AsideBody: FC<IAsideBodyProps> = (props) => {
     <div
       data-component-name="Aside/AsideBody"
       className={classNames(
-        "h-full px-6",
+        "h-full px-2",
         "no-scrollbar",
         className
       )}
@@ -57,7 +57,7 @@ export const AsideFooter: FC<IAsideFooterProps> = (props) => {
   return (
     <div
       data-component-name="Aside/AsideFooter"
-      className={classNames("px-6", className)}
+      className={classNames("px-2", className)}
       {...rest}
     >
       {children}
@@ -88,7 +88,7 @@ const Aside: FC<IAsideProps> = (props) => {
         // Mobile Design
         "max-md:w-full max-md:shadow-none ltr:max-md:-left-[20rem] rtl:max-md:-right-[20rem]",
         {
-          "md:w-[20rem]": asideStatus,
+          "md:w-[17rem]": asideStatus,
           "md:w-[6.225em]": !asideStatus,
           "ltr:max-md:-left-[26rem] rtl:max-md:-right-[26rem]": !asideStatus,
           "ltr:max-md:left-0 rtl:max-md:right-0": asideStatus,

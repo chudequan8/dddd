@@ -83,12 +83,17 @@ NavItemText.displayName = "NavItemText";
 
 interface INavIconProps {
   icon?: string
+  iconClassName?: string
 }
 const NavIcon: FC<INavIconProps> = (props) => {
-  const { icon } = props
+  const { icon, iconClassName } = props
   return (
-    <div className="w-10 h-5">
-      <Image className="object-contain" src={require(`@/assets/nav/${icon}.png`)} alt="" />
+    <div className="ml-2 mr-4">
+      {/* <Image className="object-contain" src={require(`@/assets/nav/${icon}.png`)} alt="" /> */}
+      <Icon className={classNames(
+        '!w-5 !h-5',
+        iconClassName
+      )} icon={icon || ''}></Icon>
     </div>
   )
   
@@ -150,6 +155,7 @@ interface INavItemProps extends HTMLAttributes<HTMLLIElement> {
   className?: string;
   isSub?: boolean;
   icon?: string
+  iconClass?: string
 }
 export const NavItem: FC<INavItemProps> = (props) => {
   const { children, iconClassName, text, to, className, icon, isSub, ...rest } = props;
@@ -163,7 +169,7 @@ export const NavItem: FC<INavItemProps> = (props) => {
 
   const CONTENT = (
     <>
-      <NavIcon icon={icon} />
+      <NavIcon icon={icon} iconClassName={iconClassName} />
       <NavItemContent>
         <NavItemText>{t(text)}</NavItemText>
         {children && !isChildrenNavButton && <div>{children as ReactNode}</div>}
@@ -274,9 +280,10 @@ interface INavCollapseProps extends HTMLAttributes<HTMLLIElement> {
   text: string;
   to: string;
   className?: string;
+  iconClassName?: string
 }
 export const NavCollapse: FC<INavCollapseProps> = (props) => {
-  const { children, icon, text, className, to, ...rest } = props;
+  const { children, icon, text, className, to, iconClassName, ...rest } = props;
 
   const { t } = useTranslation();
 
@@ -312,7 +319,7 @@ export const NavCollapse: FC<INavCollapseProps> = (props) => {
           }
           onClick={() => setIsActive(!isActive)}
         >
-          <NavIcon icon={icon} />
+          <NavIcon icon={icon} iconClassName={iconClassName} />
           <NavItemContent>
             <NavItemText>
               <Link href={to}>{t(text)}</Link>

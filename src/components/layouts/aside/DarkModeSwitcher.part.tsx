@@ -38,12 +38,8 @@ const StyledButton: FC<IStyledButtonProps> = ({ text, icon, status }) => {
         "p-4",
         "text-black",
         "flex flex-auto items-center justify-center",
-        "truncate dark:!text-white",
-		    darkModeStatus === status && '!text-white bg-blue',
-        // {
-        //   "bg-blue dark:bg-blue text-white dark:text-white":
-        //     darkModeStatus === status,
-        // },
+        "truncate text-title",
+		    darkModeStatus === status && 'bg-blue',
         themeConfig.transition
       )}
       onClick={handeClick}
@@ -60,7 +56,7 @@ const StyledButton: FC<IStyledButtonProps> = ({ text, icon, status }) => {
 
 const DarkModeSwitcherPart = () => {
   return (
-    <div className="flex w-full overflow-hidden rounded-xl bg-blue-light text-sm dark:bg-dark-blue-light">
+    <div className="flex w-full mt-2 overflow-hidden rounded-xl bg-blue-light text-sm bg-primary">
       <StyledButton status={DARK_MODE.DARK} text="Dark" icon='icon-moon' />
       <StyledButton status={DARK_MODE.LIGHT} text="Light" icon='icon-sun-light' />
     </div>

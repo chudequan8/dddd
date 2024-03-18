@@ -55,3 +55,15 @@ export { default as HeroWarning } from "./Warning"
 export { default as HeroAddAndDel } from "./AddAndDel"
 export { default as CustomIcon } from "./CustomIcon"
 export * from "./CustomIcon"
+
+export { default as AsideNav1 } from './aside/Nav1'
+export { default as AsideNav2 } from './aside/Nav2'
+export { default as AsideNav3 } from './aside/Nav3'
+export { default as AsideNav4 } from './aside/Nav4'
+export { default as AsideNav5 } from './aside/Nav5'
+export { default as AsideNav6 } from './aside/Nav6'
+export { default as AsideNav7 } from './aside/Nav7'
+export { default as AsideNav8 } from './aside/Nav8'
+export { default as AsideNav9 } from './aside/Nav9'
+export { default as AsideNav10 } from './aside/Nav10'
+export { default as AsideNav11 } from './aside/Nav11'

@@ -53,10 +53,10 @@ const DefaultAsideTemplate = () => {
                 </NavCollapse>
               );
             } else {
-              return <NavItem key={p.to} icon={p.icon} {...p} />;
+              return <NavItem key={p.to} iconClassName={p.iconClassName} icon={p.icon} {...p} />;
             }
           })}
-          <LanguageSelectPart />
+          {/* <LanguageSelectPart /> */}
           <DarkModeSwitcherPart />
         </Nav>
       </AsideBody>
