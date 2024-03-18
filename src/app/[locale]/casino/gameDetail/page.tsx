@@ -72,7 +72,7 @@ export default function CrashPage() {
                             <Image className='w-[130px] h-[50px]' src={LogoImg} alt=''></Image>
                         </div>
                         <div className='flex'>
-                            <div className='px-3 py-3 text-white border-solid border-[1px] border-[#4D565] rounded-sm mr-4  '>45 Games <span className='ml-2'>></span></div>
+                            <div className='px-3 py-3 text-white border-solid border-[1px] border-[#4D565] rounded-sm mr-4  '>45 Games <span className='ml-2'>&gt;</span></div>
                             <div className='px-3 py-3 text-white border-solid border-[1px] border-[#4D565] rounded-sm'>More info</div>
                         </div>
                     </div>

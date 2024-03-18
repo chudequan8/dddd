@@ -14,14 +14,13 @@ import { TRounded } from '@/types/rounded.type';
 import { TColors } from '@/types/colors.type';
 import { TColorIntensity } from '@/types/colorIntensities.type';
 import themeConfig from '../../config/theme.config';
-import { IValidationBaseProps } from './Validation';
 
 export type TCheckboxVariants = 'default' | 'switch';
 export type TCheckboxDimension = 'sm' | 'default' | 'lg' | 'xl';
 
 interface ICheckboxProps
 	extends InputHTMLAttributes<HTMLInputElement>,
-		Partial<IValidationBaseProps> {
+		Partial<any> {
 	checked?: boolean;
 	className?: string;
 	color?: TColors;

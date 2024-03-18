@@ -25,7 +25,7 @@ const SwiperList: FC<ISwiperProps> = (props) => {
 		swiper?.slidePrev()
         prev && prev()
 	};
-	const slideChange = (e) => {
+	const slideChange = (e: any) => {
 		setSlideIndex(e.activeIndex)
 	}
 

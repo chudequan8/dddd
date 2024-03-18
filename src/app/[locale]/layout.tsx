@@ -7,6 +7,7 @@ import { dir } from "i18next";
 import i18nConfig from "../../../i18nConfig";
 import { variables } from "../fonts";
 import classNames from "classnames";
+import dynamic from "next/dynamic";
 
 export const metadata: Metadata = {
   title: "",
@@ -16,6 +17,8 @@ export const metadata: Metadata = {
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
 }
+
+const AppWrapper = dynamic(() => import('./_app'))
 
 const RootLayout = ({
   children,
@@ -28,7 +31,9 @@ const RootLayout = ({
   return (
     <html suppressHydrationWarning lang={locale} dir={dir(locale)} className={classNames(...variables, 'theme-default dark')}>
       <body>
-        {children}
+        <AppWrapper>
+          {children}
+        </AppWrapper>
       </body>
     </html>
   );

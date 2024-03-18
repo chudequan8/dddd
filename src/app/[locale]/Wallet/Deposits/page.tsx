@@ -76,7 +76,7 @@ export default function WalletDeposit(){
                                 <div className="flex h-7 mb-3 justify-between" style={{ flexWrap:'wrap' }}>
                                     {
                                         coinArray.map((item:any,index:any) => {
-                                            return <div style={{ width:'fit-content' }} className="text-base mr-2 px-3 h-7 flex items-center bg-[#eaecf3] rounded-xl" style={{ boxSizing:'border-box' }}>
+                                            return <div style={{ width:'fit-content', boxSizing:'border-box' }} className="text-base mr-2 px-3 h-7 flex items-center bg-[#eaecf3] rounded-xl">
                                                 <Image src={item.icon} alt="" className="w-4 h-4 mr-1">
                                                 </Image>
                                                 { item.text }

@@ -27,7 +27,7 @@ export default function PickPage() {
 	const prev = () => {
 		swiper?.slidePrev()
 	};
-	const slideChange = (e) => {
+	const slideChange = (e: any) => {
 		setSlideIndex(e.activeIndex)
 	}
 

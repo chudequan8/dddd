@@ -19,7 +19,7 @@ const Reviews = () => {
                     </div>
                 </div>
                 <div className='text-primary'>
-                    Show more >
+                    Show more &gt;
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ const Reviews = () => {
                 <div className='text-primary flex justify-between w-full'>
                     <div className='flex items-center'>
                         <div className='cursor-pointer hover:border-b-[1px] leading-4 border-primary border-solid'>show 61 Replies </div>
-                        <span className='text-text ml-4 text-2xl cursor-pointer'>></span>
+                        <span className='text-text ml-4 text-2xl cursor-pointer'>&gt;</span>
                     </div>
 
                     <div className='py-1 px-2 rounded-md bg-[#244321] cursor-pointer flex items-center'>

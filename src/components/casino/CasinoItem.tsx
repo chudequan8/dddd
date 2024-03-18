@@ -10,6 +10,7 @@ export interface ICasinoItemProps {
     title?: string
     src?: string | StaticImport
     onClick?: () => void
+    className?: string
 }
 
 const CasinoItem: FC<ICasinoItemProps> = (props: any) => {
