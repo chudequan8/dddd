@@ -36,6 +36,7 @@ const config: Config = {
         '6596nj': 'var(--6596nj)',
         '16j75bq': 'var(--16j75bq)',
         '3qez5v': 'var(--3qez5v)',
+        '7h9g04':  'var(--7h9g04)'
       },
 
       fontFamily: {

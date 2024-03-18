@@ -46,7 +46,7 @@ export const asidePages: PagesType.Pages = [
     icon: "AsideNav5",
   },
   {
-    to: "",
+    to: "/vipclub",
     text: "VIP Club",
     icon: "AsideNav8",
   },

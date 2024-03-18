@@ -171,6 +171,8 @@ img {
   --page-shadow: linear-gradient(to right, #DADDE6, rgba(218, 221, 230, 0));
   --16j75bq: #F6F7FA;
   --3qez5v: linear-gradient(180deg,#EAECF3 0%,#F6F7FA 100%);
+  --7h9g04:#c5c6ca;
+  --18w92jy:#fff;
 }
 
 .theme-default.dark {
@@ -195,7 +197,12 @@ img {
   --1f5xvoq: rgba(30,32,36,.36);
   --page-shadow: linear-gradient(to right, #111415, rgba(17, 20, 21, 0));
   --16j75bq: #191A1E;
+<<<<<<< Updated upstream
   --3qez5v: linear-gradient(180deg,#191B1E 0%,#24262B 100%);
+=======
+  --7h9g04: #17181b;
+  --18w92jy:#1E2024;
+>>>>>>> Stashed changes
 }
 
 .s-conic {
