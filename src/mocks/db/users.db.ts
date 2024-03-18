@@ -1,24 +1,5 @@
 import { StaticImageData } from 'next/image';
-import {
-	User1,
-	User1Thumb,
-	User2,
-	User2Thumb,
-	User3,
-	User3Thumb,
-	User4,
-	User4Thumb,
-	User5,
-	User5Thumb,
-	User6,
-	User6Thumb,
-	User7,
-	User7Thumb,
-	User8,
-	User8Thumb,
-	User9,
-	User9Thumb,
-} from '../../assets/images';
+import User from '../../assets/profile/user.png';
 
 export type TUser = {
 	id: string;
@@ -66,7 +47,7 @@ export const usersDbList = {
 		password: '!123Asd',
 		position: 'Web Developer',
 		isVerified: true,
-		image: { org: User1 as StaticImageData, thumb: User1Thumb as StaticImageData },
+		image: { org: User as StaticImageData, thumb: User as StaticImageData },
 		socialAuth: {
 			google: true,
 			facebook: false,
@@ -91,7 +72,7 @@ export const usersDbList = {
 		password: '!123Asd',
 		position: 'Administrator',
 		isVerified: true,
-		image: { org: User2 as StaticImageData, thumb: User2Thumb as StaticImageData },
+		image: { org: User as StaticImageData, thumb: User as StaticImageData },
 		socialAuth: {
 			google: true,
 			facebook: false,
@@ -108,7 +89,7 @@ export const usersDbList = {
 		password: '!123Asd',
 		position: 'Administrator',
 		isVerified: true,
-		image: { org: User3 as StaticImageData, thumb: User3Thumb as StaticImageData },
+		image: { org: User as StaticImageData, thumb: User as StaticImageData },
 		socialAuth: {
 			google: true,
 			facebook: true,
@@ -125,7 +106,7 @@ export const usersDbList = {
 		password: '!123Asd',
 		position: 'Administrator',
 		isVerified: true,
-		image: { org: User4 as StaticImageData, thumb: User4Thumb as StaticImageData },
+		image: { org: User as StaticImageData, thumb: User as StaticImageData },
 		socialAuth: {
 			google: false,
 			facebook: false,
@@ -142,7 +123,7 @@ export const usersDbList = {
 		password: '!123Asd',
 		position: 'Administrator',
 		isVerified: true,
-		image: { org: User5 as StaticImageData, thumb: User5Thumb as StaticImageData },
+		image: { org: User as StaticImageData, thumb: User as StaticImageData },
 		socialAuth: {
 			google: true,
 			facebook: false,
@@ -159,7 +140,7 @@ export const usersDbList = {
 		password: '!123Asd',
 		position: 'Web Developer',
 		isVerified: true,
-		image: { org: User6 as StaticImageData, thumb: User6Thumb as StaticImageData },
+		image: { org: User as StaticImageData, thumb: User as StaticImageData },
 		socialAuth: {
 			google: true,
 			facebook: false,
@@ -190,7 +171,7 @@ export const usersDbList = {
 		password: '!123Asd',
 		position: 'User',
 		isVerified: true,
-		image: { org: User7 as StaticImageData, thumb: User7Thumb as StaticImageData },
+		image: { org: User as StaticImageData, thumb: User as StaticImageData },
 		socialAuth: {
 			google: true,
 			facebook: true,
@@ -207,7 +188,7 @@ export const usersDbList = {
 		password: '!123Asd',
 		position: 'User',
 		isVerified: true,
-		image: { org: User8 as StaticImageData, thumb: User8Thumb as StaticImageData },
+		image: { org: User as StaticImageData, thumb: User as StaticImageData },
 		socialAuth: {
 			google: false,
 			facebook: false,
@@ -240,7 +221,7 @@ export const usersDbList = {
 		password: '!123Asd',
 		position: 'User',
 		isVerified: true,
-		image: { org: User9 as StaticImageData, thumb: User9Thumb as StaticImageData },
+		image: { org: User as StaticImageData, thumb: User as StaticImageData },
 		socialAuth: {
 			google: true,
 			facebook: true,

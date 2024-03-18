@@ -16,6 +16,7 @@ import themeConfig from '../config/theme.config';
 import useDeviceScreen from '../hooks/useDeviceScreen';
 import { useLocalStorageState } from 'ahooks';
 import STORAGE from '@/constants/storage.constant';
+import { LangType } from '@/types/lang.type';
 import type { SetState } from 'ahooks/lib/createUseStorageState'
 
 export type ThemeContextProps = {
@@ -92,16 +93,17 @@ export const ThemeContextProvider: FC<IThemeContextProviderProps> = ({ children 
 	/**
 	 * Messages Status
 	 * */
+	// @ts-ignore
 	const [ messageStatus, setMessageStatus] = useLocalStorageState<boolean>(false);
 
 	
 	/**
 	 * Font Size
 	 */
-	const [fontSize, setFontSize] = useLocalStorageState<number>(
+	const [fontSize, setFontSize] = useLocalStorageState<any>(
 		typeof window !== 'undefined' && Number(localStorage.getItem('fyr_fontSize'))
-			? Number(localStorage.getItem('fyr_fontSize'))
-			: themeConfig.fontSize,
+			? localStorage.getItem('fyr_fontSize')?.toString() as string
+			: themeConfig.fontSize.toString() as string,
 	);
 	useEffect(() => {
 		localStorage.setItem('fyr_fontSize', fontSize?.toString());
@@ -112,8 +114,10 @@ export const ThemeContextProvider: FC<IThemeContextProviderProps> = ({ children 
 	/**
 	 * Header Search
 	 * */
+	// @ts-ignore
 	const [ headerSearch, setHeaderSearch] = useLocalStorageState<boolean>(false);
 
+	// @ts-ignore
 	const values: ThemeContextProps = useMemo(
 		() => ({
 			isDarkTheme,

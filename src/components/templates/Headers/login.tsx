@@ -31,8 +31,6 @@ const loginModal = () => {
 
 	console.log("themeConfig",themeConfig)
 
-	const { textColor, shadeColorIntensity } = useColorIntensity(themeConfig.themeColorShade);
-
 	const fontClasses = classNames(
 		'font-bold text-base',
 		`text-[#000] dark:text-[#fff]`
