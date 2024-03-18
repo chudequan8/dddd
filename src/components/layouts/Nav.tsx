@@ -18,25 +18,25 @@ import themeConfig from "@/config/theme.config";
 import Image from "next/image";
 import { IconArrow } from "@/assets/images";
 import { useTheme } from "@/context/themeContext";
+import Icon from "../icon/Icon";
 
 const navItemClasses = {
   default: classNames(
-    "p-3 last:mb-0",
+    "p-3 last:mb-0 h-12",
     "flex items-center",
     "cursor-pointer",
     "overflow-hidden",
-    "rounded-xl",
+    "rounded-sm",
     "border",
-    "text-black",
-    "hover:text-black-950 hover:bg-blue-hover dark:hover:text-zinc-100",
-    "dark:hover:bg-dark-blue-hover dark:text-white",
+    "text-text",
+    "hover:text-title hover:bg-1h443ei",
     "grow",
     themeConfig.transition
   ),
   inactive: "border-transparent",
   active:
     "border-zinc-300 text-black-950 dark:border-zinc-800 dark:text-zinc-100",
-  here: "text-zinc-950 dark:text-zinc-100 border-transparent",
+  here: "text-title bg-16j75bq",
 };
 
 const navItemChildCheck = (
@@ -80,6 +80,19 @@ const NavItemText: FC<INavItemTextProps> = (props) => {
   );
 };
 NavItemText.displayName = "NavItemText";
+
+interface INavIconProps {
+  icon?: string
+}
+const NavIcon: FC<INavIconProps> = (props) => {
+  const { icon } = props
+  return (
+    <div className="w-10 h-5">
+      <Image className="object-contain" src={require(`@/assets/nav/${icon}.png`)} alt="" />
+    </div>
+  )
+  
+}
 
 interface INavItemContentProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
@@ -136,9 +149,10 @@ interface INavItemProps extends HTMLAttributes<HTMLLIElement> {
   to?: string;
   className?: string;
   isSub?: boolean;
+  icon?: string
 }
 export const NavItem: FC<INavItemProps> = (props) => {
-  const { children, iconClassName, text, to, className, isSub, ...rest } = props;
+  const { children, iconClassName, text, to, className, icon, isSub, ...rest } = props;
 
   const { t } = useTranslation();
 
@@ -149,7 +163,7 @@ export const NavItem: FC<INavItemProps> = (props) => {
 
   const CONTENT = (
     <>
-      <i className={classNames('iconfont text-blue  w-[2.5rem]', iconClassName)}></i>
+      <NavIcon icon={icon} />
       <NavItemContent>
         <NavItemText>{t(text)}</NavItemText>
         {children && !isChildrenNavButton && <div>{children as ReactNode}</div>}
@@ -162,7 +176,7 @@ export const NavItem: FC<INavItemProps> = (props) => {
 
   return (
     <div
-      className={classNames('w-full ', {
+      className={classNames('w-full', {
         'tooltip tooltip-right hover:tooltip-open': !asideStatus
       })}
       data-tip={t(text)}
@@ -170,8 +184,9 @@ export const NavItem: FC<INavItemProps> = (props) => {
       <li
         data-component-name="Nav/NavItem"
         className={classNames(
-          "flex list-none items-center overflow-hidden whitespace-nowrap",
-          !isSub && "bg-blue-light dark:bg-dark-blue-light mb-4 rounded-xl",
+          "flex list-none items-center overflow-hidden whitespace-nowrap rounded-sm box-border",
+          // navItemClasses.default,
+          !isSub && 'bg-primary mt-2',
           className
         )}
         {...rest}
@@ -282,38 +297,33 @@ export const NavCollapse: FC<INavCollapseProps> = (props) => {
     <li
       data-component-name="Nav/NavCollapse"
       className={classNames(
-        "list-none overflow-hidden bg-blue-light dark:bg-dark-blue-light mb-4 rounded-xl",
+        "list-none overflow-hidden bg-primary rounded-sm mt-2",
         className
       )}
       {...rest}
     >
-      <div data-tip={asideStatus ? "" : t(text)} className="tooltip hover:tooltip-open tooltip-right">
+      <div data-tip={asideStatus ? "" : t(text)} className="tooltip hover:tooltip-open tooltip-right w-full">
         <div
           role="presentation"
           className={
-            isActive || here
+            isActive
               ? classNames(navItemClasses.default, navItemClasses.here)
               : classNames(navItemClasses.default, navItemClasses.inactive)
           }
           onClick={() => setIsActive(!isActive)}
         >
-          <div className={classNames("icon text-xl w-[2.5rem] text-[var(--primary-color)]", icon)}></div>
-          <NavItemContent >
+          <NavIcon icon={icon} />
+          <NavItemContent>
             <NavItemText>
               <Link href={to}>{t(text)}</Link>
             </NavItemText>
             <div>
-              <Image
-                src={IconArrow}
-                alt=""
-                className={classNames(
-                  "text-xl",
-                  "w-6 h-6",
-                  {
-                    "rotate-90": isActive,
-                  }
-                )}
-              />
+              <Icon icon="Arrow" className={classNames(
+                "!w-4 !h-4 transition",
+                {
+                  "rotate-90": isActive,
+                }
+              )} />
             </div>
           </NavItemContent>
         </div>
@@ -331,10 +341,7 @@ export const NavCollapse: FC<INavCollapseProps> = (props) => {
             }}
             transition={{ duration: 0.3 }}
             className={classNames(
-              "!transition-margin !duration-300 !ease-in-out",
-              {
-                "mx-2": asideStatus,
-              }
+              "!transition-margin !duration-300 !ease-in-out bg-16j75bq",
             )}
           >
             {children}

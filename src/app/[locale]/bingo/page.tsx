@@ -7,9 +7,11 @@ import sImg from '@/assets/bingo/s.png'
 import Image from "next/image";
 import CoinFlagImg from '@/assets/bingo/coinFlag.png'
 import Icon from "@/components/icon/Icon";
+import SwiperList from "@/components/casino/SwiperList";
 
 const Bingo = () => {
     const [ onlineActive, setOnlineActive ] = useState(0)
+
     return (
         <div className="max-page-container">
             <BreadCrumb option={[{name: 'Bingo'}]} />
@@ -62,22 +64,13 @@ const Bingo = () => {
                                     )
                                 }
                             </div>
-                            
-                            
                         </div>
                     </div>
                 ))}
             </div>
 
-			<div className='text-2xl text-title mt-4 mb-2'>Buy Extra Ball Feature</div>
-            <div className='grid grid-cols-6 w-full gap-5'>
-                <CasinoItem className='flex-1'></CasinoItem>
-                <CasinoItem className='flex-1'></CasinoItem>
-                <CasinoItem className='flex-1'></CasinoItem>
-                <CasinoItem className='flex-1'></CasinoItem>
-                <CasinoItem className='flex-1'></CasinoItem>
-                <CasinoItem className='flex-1'></CasinoItem>
-            </div>
+            
+            <SwiperList columns={[{},{},{},{},{},{},{}]}></SwiperList>
         </div>
     )
 }

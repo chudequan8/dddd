@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import ArrowDownGray from '@/assets/casino/ArrowDownGray.svg';
 
-interface IViewAllPaginateProps {
+export interface IViewAllPaginateProps {
 	next?: () => void;
 	prev?: () => void;
 	className?: string;

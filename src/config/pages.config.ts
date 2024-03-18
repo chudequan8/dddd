@@ -2,75 +2,75 @@ export const asidePages: PagesType.Pages = [
   {
     to: "/casino",
     text: "Casino",
-    icon: "icon-menu-sport",
+    icon: "1",
     subPages: [
       {
         to: "/casino/gameList",
         text: "Picks For You",
-        icon: "https://media3.scdn.vn/img4/2023/05_17/yinpavnKTeNesRxwyq5x.png",
+        icon: "1",
       },
       {
         to: "/casino",
         text: "Casino Pages",
-        icon: "https://media3.scdn.vn/img4/2023/05_17/yinpavnKTeNesRxwyq5x.png",
+        icon: "2",
       },
     ],
   },
   {
     to: "/sports",
     text: "Sports",
-    icon: "icon-menu-real-casino",
+    icon: "2",
     subPages: [
       {
         to: "/sports/live",
         text: "Live Events",
-        icon: "https://media3.scdn.vn/img4/2023/05_17/yinpavnKTeNesRxwyq5x.png",
+        icon: "1",
       },
     ],
   },
   {
     to: "",
     text: "Lottery",
-    icon: "icon-ball-nine",
+    icon: "3",
     subPages: [
       {
         to: "/lottery",
         text: "All Lotteries",
-        icon: "https://media3.scdn.vn/img4/2023/05_17/yinpavnKTeNesRxwyq5x.png",
+        icon: "1",
       },
     ],
   },
   {
     to: "/bingo",
     text: "Bingo",
-    icon: "icon-huodong",
+    icon: "1",
   },
   {
     to: "",
     text: "VIP Club",
-    icon: "icon-menu-promotion",
+    icon: "1",
   },
   {
     to: "",
     text: "Affiliate",
-    icon: "icon-service-online",
+    icon: "4",
   },
   {
     to: "",
     text: "Sponsorships",
-    icon: "icon-ball-nine",
+    icon: "2",
     subPages: [
       {
         to: "/sponsorships/afa",
         text: "AFA",
-        icon: "https://media3.scdn.vn/img4/2023/05_17/yinpavnKTeNesRxwyq5x.png",
+        icon: "1",
       },
     ],
   },
   {
     to: "/liveSupport",
     text: "Live Support",
-    icon: "icon-service-online",
+    icon: "2",
   },
 ];
 

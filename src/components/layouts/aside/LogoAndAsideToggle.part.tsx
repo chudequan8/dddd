@@ -18,7 +18,7 @@ const LogoAndAsideTogglePart = () => {
     >
       <div
         onClick={() => setAsideStatus(!asideStatus)}
-        className="btn bg-yellow hover:bg-yellow flex h-12 w-12 items-center justify-center"
+        className="btn bg-primary hover:bg-yellow flex h-12 w-12 items-center justify-center"
       >
         <i className="trigger-icon icon-bottom-menu text-white text-xl"></i>
       </div>

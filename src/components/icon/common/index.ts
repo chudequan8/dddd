@@ -15,6 +15,7 @@ export { default as CasinoJIcon } from './CasinoJIcon'
 export { default as HeroInformationCircle } from './InformationCircle';
 export { default as HeroLanguage } from './Language';
 export { default as HeroChevronRight } from './ChevronRight';
+export { default as Arrow } from './Arrow';
 
 export { default as CasinoQuestionSvg } from './game/QuestionSVG';
 export { default as CasinoWinnerSvg } from './game/WinnerSvg';

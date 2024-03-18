@@ -5,7 +5,7 @@ import { Carousel } from 'antd';
 
 import Image from 'next/image';
 import CasinoItem from '@/components/casino/CasinoItem';
-import ViewAllPaginate from '@/components/ui/ViewAllPaginate';
+import ViewAllPaginate from '@/components/casino/ViewAllPaginate';
 
 export default function BcOriginals() {
 	const carRef = createRef<CarouselRef>();

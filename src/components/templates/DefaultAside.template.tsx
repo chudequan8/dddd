@@ -48,12 +48,12 @@ const DefaultAsideTemplate = () => {
               return (
                 <NavCollapse key={p.to} text={p.text} to={p.to} icon={p.icon}>
                   {p.subPages.map((_p, _i) => (
-                    <NavItem key={_p.to} isSub={true} {..._p} />
+                    <NavItem key={_p.to} icon={_p.icon} isSub={true} {..._p} />
                   ))}
                 </NavCollapse>
               );
             } else {
-              return <NavItem key={p.to} {...p} />;
+              return <NavItem key={p.to} icon={p.icon} {...p} />;
             }
           })}
           <LanguageSelectPart />

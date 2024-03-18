@@ -11,11 +11,23 @@
 }
 
 body,
-aside,
 section,
 header,
 footer {
   background-color: var(--color-bg-primary);
+}
+aside {
+  background-color: var(--color-standard);
+}
+aside::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: .75rem;
+  height: 100%;
+  pointer-events: none;
+  background-image: var(--page-shadow);
 }
 
 img {
@@ -58,7 +70,7 @@ img {
 }
 
 .dark .bottom-shadow::after {
-  background-image: linear-gradient(to bottom, #111415, rgba(17, 20, 21, 0));
+  background-image: linear-gradient(to bottom, #1c1e22, rgba(17, 20, 21, 0));
 }
 
 .btn {
@@ -156,6 +168,8 @@ img {
   --a56fau: #31373D;
   --6596nj: #F6F7FA;
   --1f5xvoq: rgba(255,255,255,.66);
+  --page-shadow: linear-gradient(to right, #DADDE6, rgba(218, 221, 230, 0));
+  --16j75bq: #F6F7FA;
 }
 
 .theme-default.dark {
@@ -178,6 +192,8 @@ img {
   --a56fau: #D4D9E6;
   --6596nj: #24262B;
   --1f5xvoq: rgba(30,32,36,.36);
+  --page-shadow: linear-gradient(to right, #111415, rgba(17, 20, 21, 0));
+  --16j75bq: #191A1E;
 }
 
 .s-conic {
