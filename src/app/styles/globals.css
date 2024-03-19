@@ -205,9 +205,9 @@ img {
 }
 
 .s-conic {
-  color: #fff !important;
-  background-color: #1d803ab3 !important;
-  background-image: conic-gradient(from 1turn,rgba(88,175,16,1),rgba(29,128,58,1)) !important;
+  color: #fff;
+  background-color: #1d803ab3;
+  background-image: conic-gradient(from 1turn,rgba(88,175,16,1),rgba(29,128,58,1));
 }
 
 .s-conic:hover {

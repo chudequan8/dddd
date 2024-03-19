@@ -4,6 +4,7 @@ import LoginModal from "@/components/templates/LoginModal";
 import { useMaskProps } from "@/components/ui/Mask";
 import Image from "next/image";
 import BannerImg from '@/assets/home/banner.png'
+import GradientButton from "@/components/ui/GradientButton";
 
 
 export default function Home() {
@@ -19,8 +20,10 @@ export default function Home() {
             <div className="text-4xl text-title">FIRST DEPOSIT BONUS</div>
             <div className="text-primary text-[42px] font-bold my-2">+180%</div>
             <div className="text-primary text-[42px] font-bold">REWARDS</div>
-            <div>
-              <div></div>
+            <div className="flex gap-4">
+              <GradientButton type="green" className=' mt-4'>Deposit & Play</GradientButton>
+              <GradientButton type="purple" className='!w-[170px] mt-4'>Free Play</GradientButton>
+
             </div>
           </div>
           <div className="flex-auto w-[1px] relative">

@@ -256,7 +256,7 @@ const NavCrash = () => {
                     flex: '3 1 0%'
                   }}>
                     <div className='text-sm'>Who's the invincible champion at the high table? Let's<br/> see what a badass you can be!</div>
-                    <GradientButton type="green" className='!w-3/4 mt-4' />
+                    <GradientButton type="green" className='!w-3/4 mt-4'>Participate Now</GradientButton>
                   </div>
                   <div className='flex-1 bg-primary rounded-md relative flex flex-col justify-center items-center' style={{
                     flex: '3 1 0%'
