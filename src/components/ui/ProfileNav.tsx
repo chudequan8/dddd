@@ -4,7 +4,8 @@ import Icon from "../icon/Icon"
 export const ProfileNav = (props:any) => {
 
     const {
-        active
+        active,
+        type = 'profile'
     } = props
 
     useEffect(() => {
@@ -53,11 +54,45 @@ export const ProfileNav = (props:any) => {
         },
     ])
 
-    
+    const [navs,setNavs] = useState<any>([
+        {
+            icon:'',
+            name:"Account Info",
+            active:true,
+        },
+        {
+            icon:'',
+            name:"Security",
+            active:false,
+        },
+        {
+            icon:'',
+            name:"Preferences",
+            active:false,
+        },
+        {
+            icon:'',
+            name:"Personal Verification",
+            active:false,
+        },
+    ])
 
     return <div className="bg-[#fff] rounded-sm py-4 px-3 mr-6 flex-1" style={{ maxWidth:'220px', }}>
         {
+            type == 'prifile' 
+            ?
             nav.map((item:any) => {
+                return <div className={ item.active ? 'h-11 pl-4 flex items-center bg-[#f5f6fa] font-bold cursor-pointer mb-2' : 'h-11 pl-4 flex items-center cursor-pointer mb-2' } style={{ boxSizing:'border-box' }}>
+                    <Icon className="profile-svg mr-3" icon="HeroSportMenuIcon">
+                    
+                    </Icon>
+                    <span className="text-sm">
+                        { item.name }
+                    </span>
+                </div>
+            })
+            :
+            navs.map((item:any) => {
                 return <div className={ item.active ? 'h-11 pl-4 flex items-center bg-[#f5f6fa] font-bold cursor-pointer mb-2' : 'h-11 pl-4 flex items-center cursor-pointer mb-2' } style={{ boxSizing:'border-box' }}>
                     <Icon className="profile-svg mr-3" icon="HeroSportMenuIcon">
                     

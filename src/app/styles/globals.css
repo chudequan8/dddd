@@ -214,6 +214,15 @@ img {
   background-image: conic-gradient(from 1turn,rgba(88,175,16,.7),rgba(29,128,58,.7));
 }
 
+.s-conic2 {
+  color: #fff;
+  background-color: #6e34e2b3;
+  background-image: conic-gradient(from 1turn,rgba(136,83,252,1),rgba(110,52,226,1));
+}
+.s-conic2:hover {
+  background-image: conic-gradient(from 1turn,rgba(136,83,252,.7),rgba(110,52,226,.7));
+}
+
 .max-page-container {
   max-width: 1340px;
   width: 100%;
