@@ -174,6 +174,7 @@ img {
   --3qez5v: linear-gradient(180deg,#EAECF3 0%,#F6F7FA 100%);
   --7h9g04:#c5c6ca;
   --18w92jy:#fff;
+  --color-title: #000;
 }
 
 .theme-default.dark {
@@ -204,13 +205,22 @@ img {
 }
 
 .s-conic {
-  color: #fff !important;
-  background-color: #1d803ab3 !important;
-  background-image: conic-gradient(from 1turn,rgba(88,175,16,1),rgba(29,128,58,1)) !important;
+  color: #fff;
+  background-color: #1d803ab3;
+  background-image: conic-gradient(from 1turn,rgba(88,175,16,1),rgba(29,128,58,1));
 }
 
 .s-conic:hover {
   background-image: conic-gradient(from 1turn,rgba(88,175,16,.7),rgba(29,128,58,.7));
+}
+
+.s-conic2 {
+  color: #fff;
+  background-color: #6e34e2b3;
+  background-image: conic-gradient(from 1turn,rgba(136,83,252,1),rgba(110,52,226,1));
+}
+.s-conic2:hover {
+  background-image: conic-gradient(from 1turn,rgba(136,83,252,.7),rgba(110,52,226,.7));
 }
 
 .max-page-container {

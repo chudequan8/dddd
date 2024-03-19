@@ -16,6 +16,7 @@ import { Space, Table, Tag } from 'antd';
 import type { TableProps } from 'antd';
 import Image from 'next/image';
 import Icon from '@/components/icon/Icon';
+import GradientButton from '@/components/ui/GradientButton';
 
 const NavCrash = () => {
   const [latestBtnActive, setLatestBtnActive] = useState(0)
@@ -255,7 +256,7 @@ const NavCrash = () => {
                     flex: '3 1 0%'
                   }}>
                     <div className='text-sm'>Who's the invincible champion at the high table? Let's<br/> see what a badass you can be!</div>
-                    <Button className='s-conic !w-3/4 !py-4 !border-0 mt-4'>Participate Now</Button>
+                    <GradientButton type="green" className='!w-3/4 mt-4'>Participate Now</GradientButton>
                   </div>
                   <div className='flex-1 bg-primary rounded-md relative flex flex-col justify-center items-center' style={{
                     flex: '3 1 0%'
