@@ -48,7 +48,7 @@ export default function HotCombos() {
             <div className="w-full flex-1 px-2 text-xs">
                 {
                     teamList.map((item, index) => (
-                        <div className="flex items-center text-1h443ei mb-2 rounded-md border-r-8 border-solid border-primary bg-[#2e3036] px-2 py-2" key={index}>
+                        <div className="flex items-center text-title mb-2 rounded-md border-r-8 border-solid border-primary bg-[#2e3036] px-2 py-2" key={index}>
                             <div className="flex-1">
                                 <div className="flex items-center">
                                     <CustomIcon type="soccer" svgProps={{
@@ -56,7 +56,7 @@ export default function HotCombos() {
                                     }} />
                                     <span> {item.title} </span>
                                 </div>
-                                <div className="text-1h443ei opacity-75 mt-1 text-[10px]">
+                                <div className="text-title opacity-75 mt-1 text-[10px]">
                                     <p>{item.subtitle}</p>
                                     <p>1x2</p>
                                 </div>
@@ -67,7 +67,7 @@ export default function HotCombos() {
                         </div>
                     ))
                 }
-                <div className=" relative flex items-center text-1h443ei h-10 mb-2 px-2 rounded-md border-2 border-solid border-primary bg-[#2e3036]">
+                <div className=" relative flex items-center text-title h-10 mb-2 px-2 rounded-md border-2 border-solid border-primary bg-[#2e3036]">
                     x1.15 Comboboost
                     <span className="absolute -right-0.5 -top-0.5 uppercase bg-[var(--color-primary)] rounded-tr-md rounded-bl-md text-[9px] py-0.5 px-1.5">comboboost</span>
                 </div>
@@ -75,15 +75,15 @@ export default function HotCombos() {
             <div className="px-2">
                 <div className="flex mb-4">
                     <label className="flex items-center gap-2 w-[100px] pl-2 rounded-md bg-[#1c1e22] border border-solid border-[#2b2e35]">
-                        <input type="text" defaultValue={"1000"} className="grow text-right text-12v585s bg-[#1c1e22] w-full" placeholder="0" />
-                        <span className="ml-1 mr-2 text-12v585s">¥</span>
+                        <input type="text" defaultValue={"1000"} className="grow text-right text-title bg-[#1c1e22] w-full" placeholder="0" />
+                        <span className="ml-1 mr-2 text-title">¥</span>
                     </label>
                     <div className="ml-2 h-[32px] overflow-hidden">
                         {priceList.map((item, index) => (
                             <div
                                 key={item}
                                 className={classNames(
-                                    "inline-flex items-center justify-center cursor-pointer mr-2 h-[32px] rounded-[16px] px-4 text-12v585s",
+                                    "inline-flex items-center justify-center cursor-pointer mr-2 h-[32px] rounded-[16px] px-4 text-title",
                                     index === 0
                                         ? " bg-[#3BC117]"
                                         : " bg-[#2e3036]"
@@ -105,19 +105,19 @@ export default function HotCombos() {
                         <span>x1.15</span>
                     </div>
                 </div>
-                <div className="flex justify-between mt-1.5 text-12v585s opacity-60">
+                <div className="flex justify-between mt-1.5 text-title opacity-60">
                     <span>Total Odds</span>
                     <div className="inline-flex">
                         <span>18.095</span>
                     </div>
                 </div>
-                <div className="flex justify-between mt-1.5 text-12v585s opacity-60">
+                <div className="flex justify-between mt-1.5 text-title opacity-60">
                     <span>Total Bet</span>
                     <div className="inline-flex">
                         <span>18.095 ¥</span>
                     </div>
                 </div>
-                <div className="flex justify-between mt-1.5 text-base text-12v585s font-semibold">
+                <div className="flex justify-between mt-1.5 text-base text-title font-semibold">
                     <span className=" uppercase">Potential Win</span>
                     <div className="inline-flex">
                         <span>18 192 ¥</span>

@@ -115,7 +115,7 @@ export default function LiveMatches() {
             className: "w-[32px] h-[26px] mr-2 text-red-500",
           }}
         />
-        <h3 className="text-[var(--text-color)] text-[22px] font-semibold">
+        <h3 className="text-title text-[22px] font-semibold">
           Live Matches
         </h3>
       </div>

@@ -114,7 +114,7 @@ export default function UpcomingEvents() {
             className: "w-[32px] h-[26px] mr-2 text-sky-500",
           }}
         />
-        <h3 className="text-[var(--text-color)] text-[22px] font-semibold">
+        <h3 className="text-title text-[22px] font-semibold">
             Upcoming Events
         </h3>
       </div>

@@ -19,7 +19,7 @@ const navList: {
   },
   {
     name: "search",
-    to: "",
+    to: "/sports/search",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function HeadNav() {
   const pathname = usePathname()
 
   return (
-    <div className="w-full h-16 p-2 flex items-center justify-between bg-white dark:bg-dark-blue dark:text-white">
+    <div className="w-full h-16 p-2 flex items-center justify-between bg-white dark:bg-16j75bq dark:text-white">
       {navList.map((nav, index) => {
         return (
           <>
