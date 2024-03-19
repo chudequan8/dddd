@@ -27,7 +27,7 @@ export default function WalletRollover(){
                         Security Setup
                     </div>
                     <div className='mt-5 flex flex-wrap gap-4'>
-                        <div style={{ height:'180px',width:'49%' }} className="justify-between px-4 py-5 flex flex-col h-32 bg-gray-300 bg-[#f1f3f7] rounded-lg">
+                        <div style={{ height:'180px',width:'49%' }} className="justify-between px-4 py-5 flex flex-col h-32 bg-[#f1f3f7] rounded-lg">
                             <div className='flex justify-between'>
                                 <Image src={Lock} alt="" className='h-7 w-7'></Image>
                                 <Image src={tip} alt="" className='h-7 w-7'></Image>
@@ -40,7 +40,7 @@ export default function WalletRollover(){
                                 SetPassword
                             </div>
                         </div>
-                        <div style={{ height:'180px',width:'49%' }} className="justify-between px-4 py-5 flex flex-col h-32 bg-gray-300 bg-[#f1f3f7] rounded-lg">
+                        <div style={{ height:'180px',width:'49%' }} className="justify-between px-4 py-5 flex flex-col h-32 bg-[#f1f3f7] rounded-lg">
                             <div className='flex justify-between'>
                                 <Image src={Lock} alt="" className='h-7 w-7'></Image>
                                 <Image src={tip} alt="" className='h-7 w-7'></Image>
@@ -53,7 +53,7 @@ export default function WalletRollover(){
                                 Verified
                             </div>
                         </div>
-                        <div style={{ height:'180px',width:'49%' }} className="justify-between px-4 py-5 flex flex-col h-32 bg-gray-300 bg-[#f1f3f7] rounded-lg">
+                        <div style={{ height:'180px',width:'49%' }} className="justify-between px-4 py-5 flex flex-col h-32 bg-[#f1f3f7] rounded-lg">
                             <div className='flex justify-between'>
                                 <Image src={Lock} alt="" className='h-7 w-7'></Image>
                                 <Image src={tip} alt="" className='h-7 w-7'></Image>
@@ -66,7 +66,7 @@ export default function WalletRollover(){
                             Phone Number Verification
                             </div>
                         </div>
-                        <div style={{ height:'180px',width:'49%' }} className="justify-between px-4 py-5 flex flex-col h-32 bg-gray-300 bg-[#f1f3f7] rounded-lg">
+                        <div style={{ height:'180px',width:'49%' }} className="justify-between px-4 py-5 flex flex-col h-32 bg-[#f1f3f7] rounded-lg">
                             <div className='flex justify-between'>
                                 <Image src={Lock} alt="" className='h-7 w-7'></Image>
                                 <Image src={tip} alt="" className='h-7 w-7'></Image>
