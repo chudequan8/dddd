@@ -44,6 +44,7 @@ const config: Config = {
       },
       textColor: {
         primary: 'var(--color-primary)',
+        title:'var(--color-title)'
       },
       borderColor: {
         primary: 'var(--color-primary)',
